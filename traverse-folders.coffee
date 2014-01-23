@@ -1,6 +1,9 @@
-_    = require 'lodash'
-fs   = require 'fs'
-path = require 'path'
+_        = require 'lodash'
+fs       = require 'fs'
+path     = require 'path'
+
+unorm    = require 'unorm'
+latinize = require './latinize'
 
 MOVIE_FILETYPES = [
   '.avi'
@@ -33,8 +36,10 @@ _sanitizeFilename = (basename) ->
     i = basename.length
   return basename
     .slice(0, i)
-    .replace(/\./g, ' ')
+    .replace(/[-.]/g, ' ')
+    .replace(/\s{2,}/g, ' ')
     .trim()
+    .normalize('NFKC') # from unorm
 
 # Note that this only searches one level.
 _directoryContainsMovies = (dir) ->
@@ -68,6 +73,8 @@ findMoviesIn = (directories...) ->
   return _.chain(directories)
     .map(_findSingle)
     .flatten()
+    .sort()
+    .uniq()
     .value()
 
 module.exports = { findMoviesIn }
