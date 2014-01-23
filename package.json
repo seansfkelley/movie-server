@@ -1,0 +1,13 @@
+{
+  "name"    : "movie-server",
+  "version" : "0.0.1",
+  "author"  : "Sean Kelley <seansfkelley@gmail.com>",
+
+  "scripts" : {
+    "start" : "coffee main.coffee"
+  },
+
+  "dependencies" : {
+    "coffee-script" : "*"
+  }
+}
