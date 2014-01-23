@@ -1,0 +1,10 @@
+main should be renamed
+main should be persistent
+watch folders for changes (https://github.com/paulmillr/chokidar)
+hook into IMDb
+cache results from IMDb
+write IMDb-resolved information to a JSON file as it changes
+
+create simple web site that I can run through http-server
+use bower for some simple hardcoded dependencies
+pretty much just slam everything (data, libs) into the page so the client can deal with compiling it
