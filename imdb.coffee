@@ -1,4 +1,5 @@
 Q    = require 'q'
+_    = require 'lodash'
 http = require 'http'
 
 _get = (title) ->
@@ -12,5 +13,11 @@ _get = (title) ->
   return d.promise
 
 module.exports.getId = (title) ->
-  _get(title)
-  .then (body) -> console.log body
+  return _get(title)
+    .then (results) ->
+      return _.chain([ 'title_popular', 'title_approx', 'title_substring' ])
+        .map (type) -> results[type]
+        .filter _.identity
+        .first() # Get the first of the title_* above which has results.
+        .first() # Get the first of that result set.
+        .value()
