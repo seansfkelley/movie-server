@@ -9,5 +9,6 @@ movies = traverser.findMoviesIn argv._...
 
 console.log movies
 
-imdb.getId movies[0]
-  .done (id) -> console.log id
+imdb.idForTitle movies[0]
+  .then ({ id }) -> imdb.informationForId id
+  .done (stuff) -> console.log stuff
