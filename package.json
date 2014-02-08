@@ -12,6 +12,7 @@
     "coffee-errors" : "*",
     "optimist"      : "*",
     "lodash"        : "*",
-    "unorm"         : "*"
+    "unorm"         : "*",
+    "q"             : "*"
   }
 }
