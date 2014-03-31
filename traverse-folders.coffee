@@ -34,12 +34,13 @@ _sanitizeFilename = (basename) ->
   ]
   if i == -1
     i = basename.length
-  return basename
+  normalized = basename
     .slice 0, i
     .replace /[-.]/g, ' '
     .replace /\s{2,}/g, ' '
     .trim()
     .normalize 'NFKC' # from unorm
+  return latinize normalized
 
 # Note that this only searches one level.
 _directoryContainsMovies = (dir) ->

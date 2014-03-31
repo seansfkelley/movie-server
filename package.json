@@ -14,6 +14,8 @@
     "winston"       : "*",
     "lodash"        : "*",
     "unorm"         : "*",
-    "q"             : "*"
+    "q"             : "*",
+
+    "handlebars"    : "*"
   }
 }

@@ -9,6 +9,7 @@ argv = require('optimist').argv
 
 traverser = require './traverse-folders'
 imdb      = require './imdb'
+client    = require './client'
 
 if argv.debug
   winston.remove winston.transports.Console
@@ -35,6 +36,9 @@ Q()
 .then (ids) ->
   winston.info "querying information for #{ids.length} ids"
   return Q.all _.map(ids, imdb.informationForId)
+.then (infos) ->
+  winston.info 'rendering static page'
+  return client.render infos
 .then ->
   winston.info 'saving cache to disk'
   return imdb.saveCache()
