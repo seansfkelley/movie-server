@@ -11,6 +11,7 @@
     "coffee-script" : "*",
     "coffee-errors" : "*",
     "optimist"      : "*",
+    "winston"       : "*",
     "lodash"        : "*",
     "unorm"         : "*",
     "q"             : "*"
