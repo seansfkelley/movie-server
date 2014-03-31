@@ -16,6 +16,7 @@
     "unorm"         : "*",
     "q"             : "*",
 
-    "handlebars"    : "*"
+    "handlebars"    : "*",
+    "less"          : "*"
   }
 }
