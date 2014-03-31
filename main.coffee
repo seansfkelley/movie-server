@@ -19,24 +19,25 @@ else if argv.verbose
 
 Q.longStackSupport = true
 
-movies = traverser.findMoviesIn argv._...
-
 Q()
 .then ->
-  winston.verbose "found #{movies.length} possible movies:\n#{JSON.stringify movies, null, 2}"
-.then ->
   winston.info 'attempting to load from cache file'
-  imdb.loadCache()
+  return imdb.loadCache()
 .then ->
+  movies = traverser.findMoviesIn argv._...
+  winston.verbose "found #{movies.length} possible movies:\n#{JSON.stringify movies, null, 2}"
+  return movies
+.then (movies) ->
   winston.info "querying ids for #{movies.length} titles"
-  Q.all _.map(movies, imdb.idForTitle)
-.then _.compact
+  return Q.all _.map(movies, imdb.idForTitle)
+.then (ids) ->
+  return _.compact ids
 .then (ids) ->
   winston.info "querying information for #{ids.length} ids"
-  Q.all _.map(ids, imdb.informationForId)
+  return Q.all _.map(ids, imdb.informationForId)
 .then ->
   winston.info 'saving cache to disk'
-  imdb.saveCache()
+  return imdb.saveCache()
 .then ->
   winston.info 'done'
 .done()

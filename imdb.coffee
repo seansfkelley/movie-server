@@ -34,7 +34,7 @@ _getJson = (url) ->
 
 idForTitle = (title) ->
   if _cache.titleToId[title]
-    winston.verbose "hit cache for title -> id on title '#{title}'"
+    winston.verbose "hit cache for title '#{title}' -> id '#{_cache.titleToId[title]}'"
     return Q _cache.titleToId[title]
   else if _cache.unknownTitles[title]
     winston.verbose "skipping known-unknown title '#{title}'"
@@ -63,7 +63,7 @@ idForTitle = (title) ->
 
 informationForId = (id) ->
   if _cache.idToInformation[id]
-    winston.verbose "hit cache for id -> information on id '#{id}'"
+    winston.verbose "hit cache for id '#{id}' -> information"
     return Q _cache.idToInformation[id]
   else
     winston.verbose "querying omdbapi for id '#{id}'"
