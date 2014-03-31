@@ -13,10 +13,10 @@ MOVIE_FILETYPES = [
 ]
 
 _firstIndexOfAny = (string, regexes) ->
-  return _.chain(regexes)
-    .map((r) -> string.search(r))
-    .filter((i) -> i > -1)
-    .tap((array) -> if not array.length then array.push(-1))
+  return _.chain regexes
+    .map (r) -> string.search(r)
+    .filter (i) -> i > -1
+    .tap (array) -> if not array.length then array.push(-1)
     .min()
     .value()
 
@@ -24,22 +24,22 @@ _firstIndexOfAny = (string, regexes) ->
 # Find all string-initial, whitespace-separated pairings of any of [({ with any of })].
 INTIAL_BRACKETED_REGEX = /^(\s*[\[\(\{][^\]\)\}]*[\]\)\}])*\s*/
 _sanitizeFilename = (basename) ->
-  basename = basename.replace(INTIAL_BRACKETED_REGEX, '')
-  i = _firstIndexOfAny(basename, [
+  basename = basename.replace INTIAL_BRACKETED_REGEX, ''
+  i = _firstIndexOfAny basename, [
     /\[/
     /\(/
     /\{/
     /dvd(scr|rip)?|xvid|divx/i
-    /\d{4}/]
-  )
+    /\d{4}/
+  ]
   if i == -1
     i = basename.length
   return basename
-    .slice(0, i)
-    .replace(/[-.]/g, ' ')
-    .replace(/\s{2,}/g, ' ')
+    .slice 0, i
+    .replace /[-.]/g, ' '
+    .replace /\s{2,}/g, ' '
     .trim()
-    .normalize('NFKC') # from unorm
+    .normalize 'NFKC' # from unorm
 
 # Note that this only searches one level.
 _directoryContainsMovies = (dir) ->
@@ -54,24 +54,24 @@ _checkFileOrDirectory = (parent) -> (p) ->
 
   stats = fs.statSync(fullPath)
   if stats.isFile() and path.extname(p) in MOVIE_FILETYPES
-    return _sanitizeFilename(path.basename(p, path.extname(p)))
-  else if stats.isDirectory() and _directoryContainsMovies(fullPath)
-    return _sanitizeFilename(p)
+    return _sanitizeFilename path.basename(p, path.extname(p))
+  else if stats.isDirectory() and _directoryContainsMovies fullPath
+    return _sanitizeFilename p
   else
     return null
 
 _findSingle = (dir) ->
-  if not fs.existsSync(dir)
+  if not fs.existsSync dir
     return []
   else
-    return _.chain(fs.readdirSync(dir))
-      .map(_checkFileOrDirectory(dir))
-      .filter(_.identity)
+    return _.chain fs.readdirSync(dir)
+      .map _checkFileOrDirectory(dir)
+      .compact()
       .value()
 
 findMoviesIn = (directories...) ->
-  return _.chain(directories)
-    .map(_findSingle)
+  return _.chain directories
+    .map _findSingle
     .flatten()
     .sort()
     .uniq()

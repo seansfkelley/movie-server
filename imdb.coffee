@@ -1,6 +1,21 @@
 Q    = require 'q'
 _    = require 'lodash'
+
+fs   = require 'fs'
 http = require 'http'
+
+_cache = null
+loadCache = ->
+  return Q.ninvoke fs, 'readFile', './cache.json'
+  .then (contents) ->
+    _cache = JSON.parse contents.toString('utf-8')
+    return # don't leak
+  .fail ->
+    _cache = {}
+    return # don't leak
+
+saveCache = ->
+  return Q.ninvoke fs, 'writeFile', 'cache.json', JSON.stringify(_cache)
 
 _getJson = (url) ->
   d = Q.defer()
@@ -23,6 +38,12 @@ idForTitle = (title) ->
         .value()
 
 informationForId = (id) ->
-  return _getJson "http://www.omdbapi.com/?i=#{id}"
+  if _cache[id]
+    return Q _cache[id]
+  else
+    _getJson "http://www.omdbapi.com/?i=#{id}"
+    .then (results) ->
+      _cache[id] = results
+      return results
 
-module.exports = { idForTitle, informationForId }
+module.exports = { loadCache, saveCache, idForTitle, informationForId }
