@@ -1,6 +1,12 @@
 <body>
   {{#each infos}}
-    {{this.Title}}
-    <br>
+    <div class="movie">
+      <img class="poster" src="{{this.Poster}}">
+      <div class="text-container">
+        <span class="title" title="{{this.filename}}">{{this.Title}}</span>
+        <span class="year">{{this.Year}}</span>
+        <p class="plot">{{this.Plot}}</p>
+      </div>
+    </div>
   {{/each}}
 </body>

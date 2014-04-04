@@ -26,7 +26,8 @@ Q()
   return imdb.loadCache()
 .then ->
   movies = traverser.findMoviesIn argv._...
-  winston.verbose "found #{movies.length} possible movies:\n#{JSON.stringify movies, null, 2}"
+  winston.info "found #{movies.length} possible movies"
+  winston.verbose "movies are:\n#{JSON.stringify movies, null, 2}"
   return movies
 .then (movies) ->
   winston.info "querying ids for #{movies.length} titles"
