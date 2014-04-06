@@ -41,9 +41,10 @@ render = (infos) ->
       for i in infos
         parsedMetascore = parseInt i.Metascore, 10
         i.MetascoreCategory = switch
-          when parsedMetascore < 41 then 'negative'
-          when parsedMetascore < 61 then 'mixed'
-          else 'positive'
+          when parsedMetascore < 41  then 'negative'
+          when parsedMetascore < 61  then 'mixed'
+          when parsedMetascore < 101 then 'positive'
+          else 'unknown'
 
       infos = infos.slice().sort _alphabeticSort
 
