@@ -15,18 +15,19 @@
             <div class="overlay-footer">
               <div class="rating-box">
                 <div class="imdb">{{this.imdbRating}}</div>
-              </div><div class="rating-box"> {{! No newline. }}
+              </div>{{!-- No newline.
+          --}}<div class="rating-box">
                 <div class="{{this.MetascoreCategory}} metacritic">{{this.Metascore}}</div>
               </div>
             </div>
           </div>
 
         </a>
-      </div><div class="text-container"> {{! No newline. }}
+      </div>{{!-- No newline.
+  --}}<div class="text-container">
         <p>
           <span class="title" title="{{this.filename}}">{{this.Title}}</span>
-          <span class="year">{{this.Year}}</span>
-          {{!-- <span class="rating">{{this.imdbRating}}</span> --}}
+          <span class="year">({{this.Year}})</span>
         </p>
         <p class="genre">{{this.Genre}}</p>
         <p class="plot">{{this.Plot}}</p>
