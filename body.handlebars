@@ -4,15 +4,31 @@
       <div class="poster">
         <img class="poster-image" src="{{this.Poster}}">
         <a href="http://www.imdb.com/title/{{this.imdbID}}">
-          <div class="poster-overlay">
-            <span class="alignment-helper"></span>
+
+          <div class="poster-overlay hover obscure"></div>
+
+          <div class="poster-overlay hover logo-overlay">
             <img class="logo" src="http://upload.wikimedia.org/wikipedia/commons/3/35/IMDb_logo.svg">
           </div>
+
+          <div class="poster-overlay hover scores">
+            <div class="overlay-footer">
+              <div class="rating-box">
+                <div class="imdb">{{this.imdbRating}}</div>
+              </div><div class="rating-box"> {{! No newline. }}
+                <div class="{{this.MetascoreCategory}} metacritic">{{this.Metascore}}</div>
+              </div>
+            </div>
+          </div>
+
         </a>
-      </div>
-      <div class="text-container">
-        <span class="title" title="{{this.filename}}">{{this.Title}}</span>
-        <span class="year">{{this.Year}}</span>
+      </div><div class="text-container"> {{! No newline. }}
+        <p>
+          <span class="title" title="{{this.filename}}">{{this.Title}}</span>
+          <span class="year">{{this.Year}}</span>
+          {{!-- <span class="rating">{{this.imdbRating}}</span> --}}
+        </p>
+        <p class="genre">{{this.Genre}}</p>
         <p class="plot">{{this.Plot}}</p>
       </div>
     </div>

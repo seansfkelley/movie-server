@@ -21,6 +21,13 @@ render = (infos) ->
       bodyTemplate = handlebars.compile body.toString('utf-8')
       htmlTemplate = handlebars.compile html.toString('utf-8')
 
+      for i in infos
+        parsedMetascore = parseInt i.Metascore, 10
+        i.MetascoreCategory = switch
+          when parsedMetascore < 41 then 'negative'
+          when parsedMetascore < 61 then 'mixed'
+          else 'positive'
+
       body = bodyTemplate { infos }
       html = htmlTemplate { body, styles }
 

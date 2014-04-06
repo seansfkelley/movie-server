@@ -1,5 +1,19 @@
+@body-width         : 600px;
+@poster-width       : 150px;
+@description-margin : 16px;
+@rating-box-size     : @poster-width / 2;
+
+.centered-rating-box(@size) {
+  width       : @size;
+  height      : @size;
+  line-height : @size;
+
+  margin-top  : (@rating-box-size - @size) / 2;
+  margin-left : (@rating-box-size - @size) / 2;
+}
+
 body {
-  width  : 600px;
+  width  : @body-width;
   margin : 0 auto;
 
   font-family : "Frutiger";
@@ -13,7 +27,7 @@ body {
 
   .poster {
     position : relative;
-    width    : 150px;
+    width    : @poster-width;
 
     a {
       display : block; // Obey height of contained img.
@@ -29,46 +43,97 @@ body {
       top      : 0;
       width    : 100%;
       height   : 100%;
+    }
 
+    .poster-overlay.hover {
       opacity : 0;
-      background-color : fade(black, 40%);
-
-      img.logo {
-        width : 70%;
-      }
-
-      // Rules for fucking centering the image.
-      text-align : center;
-
-      span.alignment-helper {
-        display        : inline-block;
-        height         : 100%;
-        vertical-align : middle;
-      }
-
-      img.logo {
-        vertical-align : middle;
-      }
     }
 
     &:hover {
-      .poster-overlay {
+      .poster-overlay.hover {
         opacity    : 1;
         transition : opacity 0.3s ease;
       }
     }
+
+    .poster-overlay.obscure {
+      background-color : fade(black, 40%);
+    }
+
+    .poster-overlay.logo-overlay {
+      img.logo {
+        width      : 70%;
+        margin-top : 20px;
+      }
+
+      text-align : center;
+    }
+
+    .poster-overlay .overlay-footer {
+      position : absolute;
+      bottom   : 0;
+    }
+
+    .poster-overlay.scores {
+      .rating-box {
+        width       : @rating-box-size;
+        height      : @rating-box-size;
+        display     : inline-block;
+        text-align  : center;
+      }
+
+      .imdb {
+        .centered-rating-box(66px);
+
+        background-image    : url('http://ia.media-imdb.com/images/G/01/imdb/images/title/titlePageSprite-407338954._V_.png');
+        background-position : -180px -71px;
+
+        font-weight : bold;
+        color       : black;
+        font-family : tahoma;
+        font-size   : 15px;
+      }
+
+      .metacritic {
+        .centered-rating-box(50px);
+
+        font-weight : bold;
+        font-family : Arial,Helvetica,sans-serif;
+        color       : white;
+        font-size   : 25px;
+
+        &.positive {
+          background-color : #6c3;
+        }
+
+        &.mixed {
+          background-color : #fc3;
+        }
+
+        &.negative {
+          background-color : #f00;
+        }
+      }
+    }
   }
 
-  .title {
-    font-size : 1.5em;
-  }
+  .text-container {
+    width          : ~"calc(100% - @{poster-width} - @{description-margin})";
+    vertical-align : top;
 
-  .year {
-    color     : lightgrey;
-    font-size : .75em;
-  }
+    margin-left : @description-margin;
 
-  .plot {
+    .title {
+      font-size : 1.5em;
+    }
 
+    .year {
+      color     : lightgrey;
+      font-size : .75em;
+    }
+
+    .plot {
+
+    }
   }
 }
