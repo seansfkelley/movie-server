@@ -26,11 +26,11 @@
       </div>{{!-- No newline.
   --}}<div class="text-container">
         <p>
-          <span class="title" title="{{this.filename}}">{{this.Title}}</span>
+          <a href="http://www.imdb.com/title/{{this.imdbID}}" class="title" target="_blank">{{this.Title}}</a>
           <span class="year">({{this.Year}})</span>
         </p>
         <p class="genre">{{this.Genre}}</p>
-        <p class="plot">{{this.Plot}}</p>
+        <p class="plot">{{this.Plot}} <a href="http://www.imdb.com/title/{{this.imdbID}}/plotsummary" class="more-plot" target="_blank">More...</a></p>
       </div>
     </div>
   {{/each}}

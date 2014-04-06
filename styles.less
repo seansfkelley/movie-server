@@ -20,6 +20,10 @@ body {
   font-size   : 14px;
 }
 
+a:not(:hover) {
+  text-decoration : none;
+}
+
 .movie {
   .poster, .text-container {
     display : inline-block;
@@ -125,6 +129,7 @@ body {
 
     .title {
       font-size : 1.5em;
+      color     : black;
     }
 
     .year {
@@ -132,7 +137,9 @@ body {
     }
 
     .plot {
-
+      .more-plot {
+        color : grey;
+      }
     }
   }
 }
