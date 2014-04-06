@@ -1,3 +1,4 @@
+_       = require 'lodash'
 Q       = require 'q'
 fs      = require 'fs'
 winston = require 'winston'
@@ -22,6 +23,16 @@ _alphabeticSort = (i1, i2) ->
     when one > two then 1
     else 0
 
+_injectAdditionalInfo = (info) ->
+  parsedMetascore = parseInt info.Metascore, 10
+  info.MetascoreCategory = switch
+    when parsedMetascore < 41  then 'negative'
+    when parsedMetascore < 61  then 'mixed'
+    when parsedMetascore < 101 then 'positive'
+    else 'unknown'
+
+  info.AllGenres = _.map info.Genre.split(','), (g) -> g.trim()
+
 render = (infos) ->
   return Q.ninvoke fs, 'readFile', 'styles.less'
     .then (styles) ->
@@ -38,14 +49,7 @@ render = (infos) ->
       bodyTemplate = handlebars.compile body.toString('utf-8')
       htmlTemplate = handlebars.compile html.toString('utf-8')
 
-      for i in infos
-        parsedMetascore = parseInt i.Metascore, 10
-        i.MetascoreCategory = switch
-          when parsedMetascore < 41  then 'negative'
-          when parsedMetascore < 61  then 'mixed'
-          when parsedMetascore < 101 then 'positive'
-          else 'unknown'
-
+      _.each infos, _injectAdditionalInfo
       infos = infos.slice().sort _alphabeticSort
 
       body = bodyTemplate { infos }
