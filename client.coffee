@@ -5,6 +5,23 @@ winston = require 'winston'
 less       = require 'less'
 handlebars = require 'handlebars'
 
+_canonicalizeForSorting = (s) ->
+  s = s.toLowerCase()
+  # Latinize?
+  if s[0...4] == 'the '
+    s = s[4..]
+  else if s[0...2] == 'a '
+    s = s[2..]
+  return s
+
+_alphabeticSort = (i1, i2) ->
+  one = _canonicalizeForSorting i1.Title
+  two = _canonicalizeForSorting i2.Title
+  return switch
+    when one < two then -1
+    when one > two then 1
+    else 0
+
 render = (infos) ->
   return Q.ninvoke fs, 'readFile', 'styles.less'
     .then (styles) ->
@@ -27,6 +44,8 @@ render = (infos) ->
           when parsedMetascore < 41 then 'negative'
           when parsedMetascore < 61 then 'mixed'
           else 'positive'
+
+      infos = infos.slice().sort _alphabeticSort
 
       body = bodyTemplate { infos }
       html = htmlTemplate { body, styles }
