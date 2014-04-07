@@ -5,7 +5,21 @@ Q       = require 'q'
 _       = require 'lodash'
 winston = require 'winston'
 
-argv = require('optimist').argv
+argv = require 'optimist'
+  .usage 'Usage: $0 directories...'
+  .boolean [ 'debug', 'verbose', 'h' ]
+  .options 'f', {
+    alias   : 'file'
+    default : 'movies.html'
+  }
+  .options 'h', {
+    alias   : 'help'
+  }
+  .argv
+
+if argv.help
+  require('optimist').showHelp()
+  return
 
 traverser = require './traverse-folders'
 imdb      = require './imdb'
@@ -17,8 +31,6 @@ if argv.debug
 else if argv.verbose
   winston.remove winston.transports.Console
   winston.add winston.transports.Console, { level : 'verbose' }
-
-output = argv.f ? 'static.html'
 
 Q.longStackSupport = true
 
@@ -41,7 +53,7 @@ Q()
   return Q.all _.map(ids, imdb.informationForId)
 .then (infos) ->
   winston.info 'rendering static page'
-  return client.render infos, output
+  return client.render infos, argv.file
 .then ->
   winston.info 'saving cache to disk'
   return imdb.saveCache()

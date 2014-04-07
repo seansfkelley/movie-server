@@ -1,0 +1,2674 @@
+<!DOCTYPE html>
+<html>
+  <meta charset="utf-8">
+  <head>
+    <title>movies</title>
+    <style>
+      body {
+  width: 600px;
+  margin: 0 auto;
+  font-family: 'Frutiger';
+  font-size: 14px;
+}
+a:not(:hover) {
+  text-decoration: none;
+}
+a {
+  color: black;
+}
+.movie {
+  margin-bottom: 4px;
+}
+.movie .poster,
+.movie .text-container {
+  display: inline-block;
+}
+.movie .poster {
+  position: relative;
+  width: 150px;
+}
+.movie .poster a {
+  display: block;
+}
+.movie .poster img.poster-image {
+  width: 100%;
+  display: block;
+}
+.movie .poster .empty-placeholder {
+  width: 150px;
+  height: 150px;
+  display: block;
+  box-sizing: border-box;
+  border: 1px solid lightgrey;
+  text-align: center;
+}
+.movie .poster .empty-placeholder:after {
+  content: 'No Image Available';
+  color: lightgrey;
+  line-height: 150px;
+}
+.movie .poster .poster-overlay {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.movie .poster .poster-overlay.hover {
+  opacity: 0;
+}
+.movie .poster:hover .poster-overlay.hover {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+.movie .poster .poster-overlay.obscure {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.movie .poster .poster-overlay.logo-overlay {
+  text-align: center;
+}
+.movie .poster .poster-overlay.logo-overlay img.logo {
+  width: 70%;
+  margin-top: 20px;
+}
+.movie .poster .poster-overlay .overlay-footer {
+  position: absolute;
+  bottom: 0;
+}
+.movie .poster .poster-overlay.scores .rating-box {
+  width: 75px;
+  height: 75px;
+  display: inline-block;
+  text-align: center;
+}
+.movie .poster .poster-overlay.scores .imdb {
+  width: 66px;
+  height: 66px;
+  line-height: 66px;
+  margin-top: 4.5px;
+  margin-left: 4.5px;
+  background-image: url('http://ia.media-imdb.com/images/G/01/imdb/images/title/titlePageSprite-407338954._V_.png');
+  background-position: -180px -71px;
+  font-weight: bold;
+  color: black;
+  font-family: tahoma;
+  font-size: 15px;
+}
+.movie .poster .poster-overlay.scores .metacritic {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  margin-top: 12.5px;
+  margin-left: 12.5px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  font-size: 25px;
+}
+.movie .poster .poster-overlay.scores .metacritic.positive {
+  background-color: #6c3;
+}
+.movie .poster .poster-overlay.scores .metacritic.mixed {
+  background-color: #fc3;
+}
+.movie .poster .poster-overlay.scores .metacritic.negative {
+  background-color: #f00;
+}
+.movie .poster .poster-overlay.scores .metacritic.unknown {
+  background-color: grey;
+  font-size: 16px;
+}
+.movie .text-container {
+  width: calc(100% - 150px - 16px);
+  vertical-align: top;
+  margin-left: 16px;
+}
+.movie .text-container a.title {
+  font-size: 1.5em;
+}
+.movie .text-container .year {
+  color: grey;
+}
+.movie .text-container .genres a.genre:not(:last-child):after {
+  content: ',';
+}
+.movie .text-container .plot a.more-plot {
+  color: grey;
+}
+
+    </style>
+  </head>
+  <body>
+  
+  <div class="movie">
+    <div class="poster">
+      
+        <img class="poster-image" src="http://ia.media-imdb.com/images/M/MV5BMjExMTEzODkyN15BMl5BanBnXkFtZTcwNTU4NTc4OQ@@._V1_SX300.jpg">
+      
+      <a href="http://www.imdb.com/title/tt2024544" target="_blank">
+
+        <div class="poster-overlay hover obscure"></div>
+
+        <div class="poster-overlay hover logo-overlay">
+          <img class="logo" src="http://upload.wikimedia.org/wikipedia/commons/3/35/IMDb_logo.svg">
+        </div>
+
+        <div class="poster-overlay hover scores">
+          <div class="overlay-footer">
+            <div class="rating-box">
+              <div class="imdb">8.3</div>
+            </div><div class="rating-box">
+              <div class="positive metacritic">97</div>
+            </div>
+          </div>
+        </div>
+
+      </a>
+    </div><div class="text-container">
+      <p>
+        <a href="http://www.imdb.com/title/tt2024544" class="title" target="_blank">12 Years a Slave</a>
+        <span class="year">(2013)</span>
+      </p>
+      <p class="genres">
+      
+        <a href="http://www.imdb.com/genre/Biography" class="genre" target="_blank">Biography</a>
+      
+        <a href="http://www.imdb.com/genre/Drama" class="genre" target="_blank">Drama</a>
+      
+        <a href="http://www.imdb.com/genre/History" class="genre" target="_blank">History</a>
+      
+      </p>
+      
+        <p class="plot">In the antebellum United States, Solomon Northup, a free black man from upstate New York, is abducted and sold into slavery. <a href="http://www.imdb.com/title/tt2024544/plotsummary" class="more-plot" target="_blank">More...</a></p>
+      
+    </div>
+  </div>
+  
+  <div class="movie">
+    <div class="poster">
+      
+        <img class="poster-image" src="http://ia.media-imdb.com/images/M/MV5BMTUxNDEyNjE4OF5BMl5BanBnXkFtZTYwNTMyNjU3._V1_SX300.jpg">
+      
+      <a href="http://www.imdb.com/title/tt0307901" target="_blank">
+
+        <div class="poster-overlay hover obscure"></div>
+
+        <div class="poster-overlay hover logo-overlay">
+          <img class="logo" src="http://upload.wikimedia.org/wikipedia/commons/3/35/IMDb_logo.svg">
+        </div>
+
+        <div class="poster-overlay hover scores">
+          <div class="overlay-footer">
+            <div class="rating-box">
+              <div class="imdb">7.7</div>
+            </div><div class="rating-box">
+              <div class="positive metacritic">67</div>
+            </div>
+          </div>
+        </div>
+
+      </a>
+    </div><div class="text-container">
+      <p>
+        <a href="http://www.imdb.com/title/tt0307901" class="title" target="_blank">25th Hour</a>
+        <span class="year">(2002)</span>
+      </p>
+      <p class="genres">
+      
+        <a href="http://www.imdb.com/genre/Crime" class="genre" target="_blank">Crime</a>
+      
+        <a href="http://www.imdb.com/genre/Drama" class="genre" target="_blank">Drama</a>
+      
+      </p>
+      
+        <p class="plot">Cornered by the DEA, convicted New York drug dealer Montgomery Brogan reevaluates his life in the 24 remaining hours before facing a seven-year jail term. <a href="http://www.imdb.com/title/tt0307901/plotsummary" class="more-plot" target="_blank">More...</a></p>
+      
+    </div>
+  </div>
+  
+  <div class="movie">
+    <div class="poster">
+      
+        <img class="poster-image" src="http://ia.media-imdb.com/images/M/MV5BODE0NTcxNTQzNF5BMl5BanBnXkFtZTcwMzczOTIzMw@@._V1_SX300.jpg">
+      
+      <a href="http://www.imdb.com/title/tt0381849" target="_blank">
+
+        <div class="poster-overlay hover obscure"></div>
+
+        <div class="poster-overlay hover logo-overlay">
+          <img class="logo" src="http://upload.wikimedia.org/wikipedia/commons/3/35/IMDb_logo.svg">
+        </div>
+
+        <div class="poster-overlay hover scores">
+          <div class="overlay-footer">
+            <div class="rating-box">
+              <div class="imdb">7.8</div>
+            </div><div class="rating-box">
+              <div class="positive metacritic">76</div>
+            </div>
+          </div>
+        </div>
+
+      </a>
+    </div><div class="text-container">
+      <p>
+        <a href="http://www.imdb.com/title/tt0381849" class="title" target="_blank">3:10 to Yuma</a>
+        <span class="year">(2007)</span>
+      </p>
+      <p class="genres">
+      
+        <a href="http://www.imdb.com/genre/Adventure" class="genre" target="_blank">Adventure</a>
+      
+        <a href="http://www.imdb.com/genre/Crime" class="genre" target="_blank">Crime</a>
+      
+        <a href="http://www.imdb.com/genre/Drama" class="genre" target="_blank">Drama</a>
+      
+      </p>
+      
+        <p class="plot">A small-time rancher agrees to hold a captured outlaw who&#x27;s awaiting a train to go to court in Yuma. A battle of wills ensues as the outlaw tries to psych out the rancher. <a href="http://www.imdb.com/title/tt0381849/plotsummary" class="more-plot" target="_blank">More...</a></p>
+      
+    </div>
+  </div>
+  
+  <div class="movie">
+    <div class="poster">
+      
+        <img class="poster-image" src="http://ia.media-imdb.com/images/M/MV5BNjkxMTc0MDc4N15BMl5BanBnXkFtZTgwODUyNTI1MDE@._V1_SX300.jpg">
+      
+      <a href="http://www.imdb.com/title/tt1800241" target="_blank">
+
+        <div class="poster-overlay hover obscure"></div>
+
+        <div class="poster-overlay hover logo-overlay">
+          <img class="logo" src="http://upload.wikimedia.org/wikipedia/commons/3/35/IMDb_logo.svg">
+        </div>
+
+        <div class="poster-overlay hover scores">
+          <div class="overlay-footer">
+            <div class="rating-box">
+              <div class="imdb">7.5</div>
+            </div><div class="rating-box">
+              <div class="positive metacritic">90</div>
+            </div>
+          </div>
+        </div>
+
+      </a>
+    </div><div class="text-container">
+      <p>
+        <a href="http://www.imdb.com/title/tt1800241" class="title" target="_blank">American Hustle</a>
+        <span class="year">(2013)</span>
+      </p>
+      <p class="genres">
+      
+        <a href="http://www.imdb.com/genre/Crime" class="genre" target="_blank">Crime</a>
+      
+        <a href="http://www.imdb.com/genre/Drama" class="genre" target="_blank">Drama</a>
+      
+      </p>
+      
+        <p class="plot">A con man, Irving Rosenfeld, along with his seductive partner Sydney Prosser, is forced to work for a wild FBI agent, Richie DiMaso, who pushes them into a world of Jersey powerbrokers and mafia. <a href="http://www.imdb.com/title/tt1800241/plotsummary" class="more-plot" target="_blank">More...</a></p>
+      
+    </div>
+  </div>
+  
+  <div class="movie">
+    <div class="poster">
+      
+        <img class="poster-image" src="http://ia.media-imdb.com/images/M/MV5BNzE5Nzg3NzY2MF5BMl5BanBnXkFtZTcwNTMwMTEzMQ@@._V1_SX300.jpg">
+      
+      <a href="http://www.imdb.com/title/tt0179074" target="_blank">
+
+        <div class="poster-overlay hover obscure"></div>
+
+        <div class="poster-overlay hover logo-overlay">
+          <img class="logo" src="http://upload.wikimedia.org/wikipedia/commons/3/35/IMDb_logo.svg">
+        </div>
+
+        <div class="poster-overlay hover scores">
+          <div class="overlay-footer">
+            <div class="rating-box">
+              <div class="imdb">6.5</div>
+            </div><div class="rating-box">
+              <div class="mixed metacritic">59</div>
+            </div>
+          </div>
+        </div>
+
+      </a>
+    </div><div class="text-container">
+      <p>
+        <a href="http://www.imdb.com/title/tt0179074" class="title" target="_blank">American Pimp</a>
+        <span class="year">(1999)</span>
+      </p>
+      <p class="genres">
+      
+        <a href="http://www.imdb.com/genre/Documentary" class="genre" target="_blank">Documentary</a>
+      
+      </p>
+      
+        <p class="plot">Street pimps, all of them African-American, discuss their lives and work: getting started, being flamboyant, pimping in various U.S. cities, bringing a woman into their group, taking a ... <a href="http://www.imdb.com/title/tt0179074/plotsummary" class="more-plot" target="_blank">More...</a></p>
+      
+    </div>
+  </div>
+  
+  <div class="movie">
+    <div class="poster">
+      
+        <img class="poster-image" src="http://ia.media-imdb.com/images/M/MV5BNTY0OTMwMjg4MF5BMl5BanBnXkFtZTcwNjQ4OTIyMQ@@._V1_SX300.jpg">
+      
+      <a href="http://www.imdb.com/title/tt0338228" target="_blank">
+
+        <div class="poster-overlay hover obscure"></div>
+
+        <div class="poster-overlay hover logo-overlay">
+          <img class="logo" src="http://upload.wikimedia.org/wikipedia/commons/3/35/IMDb_logo.svg">
+        </div>
+
+        <div class="poster-overlay hover scores">
+          <div class="overlay-footer">
+            <div class="rating-box">
+              <div class="imdb">7.2</div>
+            </div><div class="rating-box">
+              <div class="unknown metacritic">N/A</div>
+            </div>
+          </div>
+        </div>
+
+      </a>
+    </div><div class="text-container">
+      <p>
+        <a href="http://www.imdb.com/title/tt0338228" class="title" target="_blank">Back to the Future: Making the Trilogy</a>
+        <span class="year">(2002)</span>
+      </p>
+      <p class="genres">
+      
+        <a href="http://www.imdb.com/genre/Documentary" class="genre" target="_blank">Documentary</a>
+      
+      </p>
+      
+        <p class="plot">This is the making of the Back to the Future Trilogy by acclaimed documentary maker Laurent Bouzereau and appears on the Back to the Future DVD set. <a href="http://www.imdb.com/title/tt0338228/plotsummary" class="more-plot" target="_blank">More...</a></p>
+      
+    </div>
+  </div>
+  
+  <div class="movie">
+    <div class="poster">
+      
+        <img class="poster-image" src="http://ia.media-imdb.com/images/M/MV5BMTg0Njk2OTM3OF5BMl5BanBnXkFtZTYwNTAyMzc3._V1_SX300.jpg">
+      
+      <a href="http://www.imdb.com/title/tt0185183" target="_blank">
+
+        <div class="poster-overlay hover obscure"></div>
+
+        <div class="poster-overlay hover logo-overlay">
+          <img class="logo" src="http://upload.wikimedia.org/wikipedia/commons/3/35/IMDb_logo.svg">
+        </div>
+
+        <div class="poster-overlay hover scores">
+          <div class="overlay-footer">
+            <div class="rating-box">
+              <div class="imdb">2.4</div>
+            </div><div class="rating-box">
+              <div class="negative metacritic">9</div>
+            </div>
+          </div>
+        </div>
+
+      </a>
+    </div><div class="text-container">
+      <p>
+        <a href="http://www.imdb.com/title/tt0185183" class="title" target="_blank">Battlefield Earth</a>
+        <span class="year">(2000)</span>
+      </p>
+      <p class="genres">
+      
+        <a href="http://www.imdb.com/genre/Action" class="genre" target="_blank">Action</a>
+      
+        <a href="http://www.imdb.com/genre/Sci-Fi" class="genre" target="_blank">Sci-Fi</a>
+      
+      </p>
+      
+        <p class="plot">After enslavement &amp; near extermination by an alien race in the year 3000, humanity begins to fight back. <a href="http://www.imdb.com/title/tt0185183/plotsummary" class="more-plot" target="_blank">More...</a></p>
+      
+    </div>
+  </div>
+  
+  <div class="movie">
+    <div class="poster">
+      
+        <img class="poster-image" src="http://ia.media-imdb.com/images/M/MV5BMTI1MDM3MTMyNV5BMl5BanBnXkFtZTYwMzM0Mzg3._V1_SX300.jpg">
+      
+      <a href="http://www.imdb.com/title/tt0094721" target="_blank">
+
+        <div class="poster-overlay hover obscure"></div>
+
+        <div class="poster-overlay hover logo-overlay">
+          <img class="logo" src="http://upload.wikimedia.org/wikipedia/commons/3/35/IMDb_logo.svg">
+        </div>
+
+        <div class="poster-overlay hover scores">
+          <div class="overlay-footer">
+            <div class="rating-box">
+              <div class="imdb">7.4</div>
+            </div><div class="rating-box">
+              <div class="positive metacritic">67</div>
+            </div>
+          </div>
+        </div>
+
+      </a>
+    </div><div class="text-container">
+      <p>
+        <a href="http://www.imdb.com/title/tt0094721" class="title" target="_blank">Beetlejuice</a>
+        <span class="year">(1988)</span>
+      </p>
+      <p class="genres">
+      
+        <a href="http://www.imdb.com/genre/Comedy" class="genre" target="_blank">Comedy</a>
+      
+        <a href="http://www.imdb.com/genre/Fantasy" class="genre" target="_blank">Fantasy</a>
+      
+      </p>
+      
+        <p class="plot">A couple of recently deceased ghosts contract the services of a &quot;bio-exorcist&quot; in order to remove the obnoxious new owners of their house. <a href="http://www.imdb.com/title/tt0094721/plotsummary" class="more-plot" target="_blank">More...</a></p>
+      
+    </div>
+  </div>
+  
+  <div class="movie">
+    <div class="poster">
+      
+        <img class="poster-image" src="http://ia.media-imdb.com/images/M/MV5BMjAyNDcxNTk3NV5BMl5BanBnXkFtZTcwMjk4MDU2NA@@._V1_SX300.jpg">
+      
+      <a href="http://www.imdb.com/title/tt1532503" target="_blank">
+
+        <div class="poster-overlay hover obscure"></div>
+
+        <div class="poster-overlay hover logo-overlay">
+          <img class="logo" src="http://upload.wikimedia.org/wikipedia/commons/3/35/IMDb_logo.svg">
+        </div>
+
+        <div class="poster-overlay hover scores">
+          <div class="overlay-footer">
+            <div class="rating-box">
+              <div class="imdb">7.2</div>
+            </div><div class="rating-box">
+              <div class="positive metacritic">81</div>
+            </div>
+          </div>
+        </div>
+
+      </a>
+    </div><div class="text-container">
+      <p>
+        <a href="http://www.imdb.com/title/tt1532503" class="title" target="_blank">Beginners</a>
+        <span class="year">(2010)</span>
+      </p>
+      <p class="genres">
+      
+        <a href="http://www.imdb.com/genre/Comedy" class="genre" target="_blank">Comedy</a>
+      
+        <a href="http://www.imdb.com/genre/Drama" class="genre" target="_blank">Drama</a>
+      
+        <a href="http://www.imdb.com/genre/Romance" class="genre" target="_blank">Romance</a>
+      
+      </p>
+      
+        <p class="plot">A young man is rocked by two announcements from his elderly father: that he has terminal cancer, and that he has a young male lover. <a href="http://www.imdb.com/title/tt1532503/plotsummary" class="more-plot" target="_blank">More...</a></p>
+      
+    </div>
+  </div>
+  
+  <div class="movie">
+    <div class="poster">
+      
+        <img class="poster-image" src="http://ia.media-imdb.com/images/M/MV5BMTUyNTczMzE1MV5BMl5BanBnXkFtZTcwNDY1NjYzMQ@@._V1_SX300.jpg">
+      
+      <a href="http://www.imdb.com/title/tt0456912" target="_blank">
+
+        <div class="poster-overlay hover obscure"></div>
+
+        <div class="poster-overlay hover logo-overlay">
+          <img class="logo" src="http://upload.wikimedia.org/wikipedia/commons/3/35/IMDb_logo.svg">
+        </div>
+
+        <div class="poster-overlay hover scores">
+          <div class="overlay-footer">
+            <div class="rating-box">
+              <div class="imdb">7.8</div>
+            </div><div class="rating-box">
+              <div class="unknown metacritic">N/A</div>
+            </div>
+          </div>
+        </div>
+
+      </a>
+    </div><div class="text-container">
+      <p>
+        <a href="http://www.imdb.com/title/tt0456912" class="title" target="_blank">A Bittersweet Life</a>
+        <span class="year">(2005)</span>
+      </p>
+      <p class="genres">
+      
+        <a href="http://www.imdb.com/genre/Action" class="genre" target="_blank">Action</a>
+      
+        <a href="http://www.imdb.com/genre/Crime" class="genre" target="_blank">Crime</a>
+      
+        <a href="http://www.imdb.com/genre/Drama" class="genre" target="_blank">Drama</a>
+      
+      </p>
+      
+        <p class="plot">Things go wrong for a high ranking mobster when he doesn&#x27;t proceed by his boss&#x27;s orders. <a href="http://www.imdb.com/title/tt0456912/plotsummary" class="more-plot" target="_blank">More...</a></p>
+      
+    </div>
+  </div>
+  
+  <div class="movie">
+    <div class="poster">
+      
+        <img class="poster-image" src="http://ia.media-imdb.com/images/M/MV5BMTQxOTExODU2MF5BMl5BanBnXkFtZTcwMzc3MDE1OQ@@._V1_SX300.jpg">
+      
+      <a href="http://www.imdb.com/title/tt0118749" target="_blank">
+
+        <div class="poster-overlay hover obscure"></div>
+
+        <div class="poster-overlay hover logo-overlay">
+          <img class="logo" src="http://upload.wikimedia.org/wikipedia/commons/3/35/IMDb_logo.svg">
+        </div>
+
+        <div class="poster-overlay hover scores">
+          <div class="overlay-footer">
+            <div class="rating-box">
+              <div class="imdb">7.9</div>
+            </div><div class="rating-box">
+              <div class="positive metacritic">85</div>
+            </div>
+          </div>
+        </div>
+
+      </a>
+    </div><div class="text-container">
+      <p>
+        <a href="http://www.imdb.com/title/tt0118749" class="title" target="_blank">Boogie Nights</a>
+        <span class="year">(1997)</span>
+      </p>
+      <p class="genres">
+      
+        <a href="http://www.imdb.com/genre/Drama" class="genre" target="_blank">Drama</a>
+      
+      </p>
+      
+        <p class="plot">The story of a young man&#x27;s adventures in the Californian pornography industry of the late 1970s and early 1980s. <a href="http://www.imdb.com/title/tt0118749/plotsummary" class="more-plot" target="_blank">More...</a></p>
+      
+    </div>
+  </div>
+  
+  <div class="movie">
+    <div class="poster">
+      
+        <img class="poster-image" src="http://ia.media-imdb.com/images/M/MV5BNTUxNzYyMjg2N15BMl5BanBnXkFtZTcwMTExNzExNw@@._V1_SX300.jpg">
+      
+      <a href="http://www.imdb.com/title/tt1259521" target="_blank">
+
+        <div class="poster-overlay hover obscure"></div>
+
+        <div class="poster-overlay hover logo-overlay">
+          <img class="logo" src="http://upload.wikimedia.org/wikipedia/commons/3/35/IMDb_logo.svg">
+        </div>
+
+        <div class="poster-overlay hover scores">
+          <div class="overlay-footer">
+            <div class="rating-box">
+              <div class="imdb">7.1</div>
+            </div><div class="rating-box">
+              <div class="positive metacritic">72</div>
+            </div>
+          </div>
+        </div>
+
+      </a>
+    </div><div class="text-container">
+      <p>
+        <a href="http://www.imdb.com/title/tt1259521" class="title" target="_blank">The Cabin in the Woods</a>
+        <span class="year">(2012)</span>
+      </p>
+      <p class="genres">
+      
+        <a href="http://www.imdb.com/genre/Horror" class="genre" target="_blank">Horror</a>
+      
+        <a href="http://www.imdb.com/genre/Mystery" class="genre" target="_blank">Mystery</a>
+      
+        <a href="http://www.imdb.com/genre/Thriller" class="genre" target="_blank">Thriller</a>
+      
+      </p>
+      
+        <p class="plot">Five friends go for a break at a remote cabin in the woods, where they get more than they bargained for. Together, they must discover the truth behind the cabin in the woods. <a href="http://www.imdb.com/title/tt1259521/plotsummary" class="more-plot" target="_blank">More...</a></p>
+      
+    </div>
+  </div>
+  
+  <div class="movie">
+    <div class="poster">
+      
+        <img class="poster-image" src="http://ia.media-imdb.com/images/M/MV5BMTk2NjM3NTM5MV5BMl5BanBnXkFtZTcwNTgyNzEzMQ@@._V1_SX300.jpg">
+      
+      <a href="http://www.imdb.com/title/tt0387898" target="_blank">
+
+        <div class="poster-overlay hover obscure"></div>
+
+        <div class="poster-overlay hover logo-overlay">
+          <img class="logo" src="http://upload.wikimedia.org/wikipedia/commons/3/35/IMDb_logo.svg">
+        </div>
+
+        <div class="poster-overlay hover scores">
+          <div class="overlay-footer">
+            <div class="rating-box">
+              <div class="imdb">7.3</div>
+            </div><div class="rating-box">
+              <div class="positive metacritic">83</div>
+            </div>
+          </div>
+        </div>
+
+      </a>
+    </div><div class="text-container">
+      <p>
+        <a href="http://www.imdb.com/title/tt0387898" class="title" target="_blank">Caché (Hidden)</a>
+        <span class="year">(2005)</span>
+      </p>
+      <p class="genres">
+      
+        <a href="http://www.imdb.com/genre/Drama" class="genre" target="_blank">Drama</a>
+      
+        <a href="http://www.imdb.com/genre/Mystery" class="genre" target="_blank">Mystery</a>
+      
+        <a href="http://www.imdb.com/genre/Thriller" class="genre" target="_blank">Thriller</a>
+      
+      </p>
+      
+        <p class="plot">A married couple is terrorized by a series of surveillance videotapes left on their front porch. <a href="http://www.imdb.com/title/tt0387898/plotsummary" class="more-plot" target="_blank">More...</a></p>
+      
+    </div>
+  </div>
+  
+  <div class="movie">
+    <div class="poster">
+      
+        <img class="poster-image" src="http://ia.media-imdb.com/images/M/MV5BMTczMzU0MjM1MV5BMl5BanBnXkFtZTcwMjczNzgyNA@@._V1_SX300.jpg">
+      
+      <a href="http://www.imdb.com/title/tt0379725" target="_blank">
+
+        <div class="poster-overlay hover obscure"></div>
+
+        <div class="poster-overlay hover logo-overlay">
+          <img class="logo" src="http://upload.wikimedia.org/wikipedia/commons/3/35/IMDb_logo.svg">
+        </div>
+
+        <div class="poster-overlay hover scores">
+          <div class="overlay-footer">
+            <div class="rating-box">
+              <div class="imdb">7.4</div>
+            </div><div class="rating-box">
+              <div class="positive metacritic">88</div>
+            </div>
+          </div>
+        </div>
+
+      </a>
+    </div><div class="text-container">
+      <p>
+        <a href="http://www.imdb.com/title/tt0379725" class="title" target="_blank">Capote</a>
+        <span class="year">(2005)</span>
+      </p>
+      <p class="genres">
+      
+        <a href="http://www.imdb.com/genre/Biography" class="genre" target="_blank">Biography</a>
+      
+        <a href="http://www.imdb.com/genre/Crime" class="genre" target="_blank">Crime</a>
+      
+        <a href="http://www.imdb.com/genre/Drama" class="genre" target="_blank">Drama</a>
+      
+      </p>
+      
+        <p class="plot">In 1959, Truman Capote learns of the murder of a Kansas family and decides to write a book about the case. While researching for his novel In Cold Blood, Capote forms a relationship with one of the killers, Perry Smith, who is on death row. <a href="http://www.imdb.com/title/tt0379725/plotsummary" class="more-plot" target="_blank">More...</a></p>
+      
+    </div>
+  </div>
+  
+  <div class="movie">
+    <div class="poster">
+      
+        <img class="poster-image" src="http://ia.media-imdb.com/images/M/MV5BMTczMTgxMjc4NF5BMl5BanBnXkFtZTcwNjM5MTA2OA@@._V1_SX300.jpg">
+      
+      <a href="http://www.imdb.com/title/tt1371111" target="_blank">
+
+        <div class="poster-overlay hover obscure"></div>
+
+        <div class="poster-overlay hover logo-overlay">
+          <img class="logo" src="http://upload.wikimedia.org/wikipedia/commons/3/35/IMDb_logo.svg">
+        </div>
+
+        <div class="poster-overlay hover scores">
+          <div class="overlay-footer">
+            <div class="rating-box">
+              <div class="imdb">7.6</div>
+            </div><div class="rating-box">
+              <div class="mixed metacritic">55</div>
+            </div>
+          </div>
+        </div>
+
+      </a>
+    </div><div class="text-container">
+      <p>
+        <a href="http://www.imdb.com/title/tt1371111" class="title" target="_blank">Cloud Atlas</a>
+        <span class="year">(2012)</span>
+      </p>
+      <p class="genres">
+      
+        <a href="http://www.imdb.com/genre/Adventure" class="genre" target="_blank">Adventure</a>
+      
+        <a href="http://www.imdb.com/genre/Drama" class="genre" target="_blank">Drama</a>
+      
+        <a href="http://www.imdb.com/genre/Sci-Fi" class="genre" target="_blank">Sci-Fi</a>
+      
+      </p>
+      
+        <p class="plot">An exploration of how the actions of individual lives impact one another in the past, present and future, as one soul is shaped from a killer into a hero, and an act of kindness ripples across centuries to inspire a revolution. <a href="http://www.imdb.com/title/tt1371111/plotsummary" class="more-plot" target="_blank">More...</a></p>
+      
+    </div>
+  </div>
+  
+  <div class="movie">
+    <div class="poster">
+      
+        <img class="poster-image" src="http://ia.media-imdb.com/images/M/MV5BMTIyNDQxNDUzNV5BMl5BanBnXkFtZTcwMzExMjAzMQ@@._V1_SX300.jpg">
+      
+      <a href="http://www.imdb.com/title/tt0112817" target="_blank">
+
+        <div class="poster-overlay hover obscure"></div>
+
+        <div class="poster-overlay hover logo-overlay">
+          <img class="logo" src="http://upload.wikimedia.org/wikipedia/commons/3/35/IMDb_logo.svg">
+        </div>
+
+        <div class="poster-overlay hover scores">
+          <div class="overlay-footer">
+            <div class="rating-box">
+              <div class="imdb">7.8</div>
+            </div><div class="rating-box">
+              <div class="mixed metacritic">58</div>
+            </div>
+          </div>
+        </div>
+
+      </a>
+    </div><div class="text-container">
+      <p>
+        <a href="http://www.imdb.com/title/tt0112817" class="title" target="_blank">Dead Man</a>
+        <span class="year">(1995)</span>
+      </p>
+      <p class="genres">
+      
+        <a href="http://www.imdb.com/genre/Drama" class="genre" target="_blank">Drama</a>
+      
+        <a href="http://www.imdb.com/genre/Fantasy" class="genre" target="_blank">Fantasy</a>
+      
+        <a href="http://www.imdb.com/genre/Western" class="genre" target="_blank">Western</a>
+      
+      </p>
+      
+        <p class="plot">On the run after murdering a man, accountant William Blake encounters a strange North American man named Nobody who prepares him for his journey into the spiritual world. <a href="http://www.imdb.com/title/tt0112817/plotsummary" class="more-plot" target="_blank">More...</a></p>
+      
+    </div>
+  </div>
+  
+  <div class="movie">
+    <div class="poster">
+      
+        <img class="poster-image" src="http://ia.media-imdb.com/images/M/MV5BMjA0NDQyMjE1MF5BMl5BanBnXkFtZTcwODE1NzY5MQ@@._V1_SX300.jpg">
+      
+      <a href="http://www.imdb.com/title/tt1278340" target="_blank">
+
+        <div class="poster-overlay hover obscure"></div>
+
+        <div class="poster-overlay hover logo-overlay">
+          <img class="logo" src="http://upload.wikimedia.org/wikipedia/commons/3/35/IMDb_logo.svg">
+        </div>
+
+        <div class="poster-overlay hover scores">
+          <div class="overlay-footer">
+            <div class="rating-box">
+              <div class="imdb">6.4</div>
+            </div><div class="rating-box">
+              <div class="positive metacritic">61</div>
+            </div>
+          </div>
+        </div>
+
+      </a>
+    </div><div class="text-container">
+      <p>
+        <a href="http://www.imdb.com/title/tt1278340" class="title" target="_blank">Dead Snow</a>
+        <span class="year">(2009)</span>
+      </p>
+      <p class="genres">
+      
+        <a href="http://www.imdb.com/genre/Comedy" class="genre" target="_blank">Comedy</a>
+      
+        <a href="http://www.imdb.com/genre/Horror" class="genre" target="_blank">Horror</a>
+      
+      </p>
+      
+        <p class="plot">A ski vacation turns horrific for a group of medical students, as they find themselves confronted by an unimaginable menace: Nazi zombies. <a href="http://www.imdb.com/title/tt1278340/plotsummary" class="more-plot" target="_blank">More...</a></p>
+      
+    </div>
+  </div>
+  
+  <div class="movie">
+    <div class="poster">
+      
+        <img class="poster-image" src="http://ia.media-imdb.com/images/M/MV5BMjY0Mzk5MjIwNl5BMl5BanBnXkFtZTcwNzg5MDYyNQ@@._V1_SX300.jpg">
+      
+      <a href="http://www.imdb.com/title/tt1226753" target="_blank">
+
+        <div class="poster-overlay hover obscure"></div>
+
+        <div class="poster-overlay hover logo-overlay">
+          <img class="logo" src="http://upload.wikimedia.org/wikipedia/commons/3/35/IMDb_logo.svg">
+        </div>
+
+        <div class="poster-overlay hover scores">
+          <div class="overlay-footer">
+            <div class="rating-box">
+              <div class="imdb">6.9</div>
+            </div><div class="rating-box">
+              <div class="positive metacritic">65</div>
+            </div>
+          </div>
+        </div>
+
+      </a>
+    </div><div class="text-container">
+      <p>
+        <a href="http://www.imdb.com/title/tt1226753" class="title" target="_blank">The Debt</a>
+        <span class="year">(2010)</span>
+      </p>
+      <p class="genres">
+      
+        <a href="http://www.imdb.com/genre/Drama" class="genre" target="_blank">Drama</a>
+      
+        <a href="http://www.imdb.com/genre/Thriller" class="genre" target="_blank">Thriller</a>
+      
+      </p>
+      
+        <p class="plot">In 1965, three Mossad agents cross into East Berlin to apprehend a notorious Nazi war criminal. Thirty years later, the secrets the agents share come back to haunt them. <a href="http://www.imdb.com/title/tt1226753/plotsummary" class="more-plot" target="_blank">More...</a></p>
+      
+    </div>
+  </div>
+  
+  <div class="movie">
+    <div class="poster">
+      
+        <img class="poster-image" src="http://ia.media-imdb.com/images/M/MV5BMjA5NzQ1NTgwNV5BMl5BanBnXkFtZTcwNjUxMzUzMw@@._V1_SX300.jpg">
+      
+      <a href="http://www.imdb.com/title/tt0435625" target="_blank">
+
+        <div class="poster-overlay hover obscure"></div>
+
+        <div class="poster-overlay hover logo-overlay">
+          <img class="logo" src="http://upload.wikimedia.org/wikipedia/commons/3/35/IMDb_logo.svg">
+        </div>
+
+        <div class="poster-overlay hover scores">
+          <div class="overlay-footer">
+            <div class="rating-box">
+              <div class="imdb">7.3</div>
+            </div><div class="rating-box">
+              <div class="positive metacritic">71</div>
+            </div>
+          </div>
+        </div>
+
+      </a>
+    </div><div class="text-container">
+      <p>
+        <a href="http://www.imdb.com/title/tt0435625" class="title" target="_blank">The Descent</a>
+        <span class="year">(2005)</span>
+      </p>
+      <p class="genres">
+      
+        <a href="http://www.imdb.com/genre/Adventure" class="genre" target="_blank">Adventure</a>
+      
+        <a href="http://www.imdb.com/genre/Horror" class="genre" target="_blank">Horror</a>
+      
+      </p>
+      
+        <p class="plot">A caving expedition goes horribly wrong, as the explorers become trapped and ultimately pursued by a strange breed of predators. <a href="http://www.imdb.com/title/tt0435625/plotsummary" class="more-plot" target="_blank">More...</a></p>
+      
+    </div>
+  </div>
+  
+  <div class="movie">
+    <div class="poster">
+      
+        <img class="poster-image" src="http://ia.media-imdb.com/images/M/MV5BMTY4NDk0NzE4Nl5BMl5BanBnXkFtZTcwMjk1NDE4MQ@@._V1_SX300.jpg">
+      
+      <a href="http://www.imdb.com/title/tt0918927" target="_blank">
+
+        <div class="poster-overlay hover obscure"></div>
+
+        <div class="poster-overlay hover logo-overlay">
+          <img class="logo" src="http://upload.wikimedia.org/wikipedia/commons/3/35/IMDb_logo.svg">
+        </div>
+
+        <div class="poster-overlay hover scores">
+          <div class="overlay-footer">
+            <div class="rating-box">
+              <div class="imdb">7.5</div>
+            </div><div class="rating-box">
+              <div class="positive metacritic">68</div>
+            </div>
+          </div>
+        </div>
+
+      </a>
+    </div><div class="text-container">
+      <p>
+        <a href="http://www.imdb.com/title/tt0918927" class="title" target="_blank">Doubt</a>
+        <span class="year">(2008)</span>
+      </p>
+      <p class="genres">
+      
+        <a href="http://www.imdb.com/genre/Drama" class="genre" target="_blank">Drama</a>
+      
+        <a href="http://www.imdb.com/genre/Mystery" class="genre" target="_blank">Mystery</a>
+      
+      </p>
+      
+        <p class="plot">A Catholic school principal questions a priest&#x27;s ambiguous relationship with a troubled young student. <a href="http://www.imdb.com/title/tt0918927/plotsummary" class="more-plot" target="_blank">More...</a></p>
+      
+    </div>
+  </div>
+  
+  <div class="movie">
+    <div class="poster">
+      
+        <img class="poster-image" src="http://ia.media-imdb.com/images/M/MV5BOTM1ODQ0Nzc4NF5BMl5BanBnXkFtZTcwMTM0MjQyNg@@._V1_SX300.jpg">
+      
+      <a href="http://www.imdb.com/title/tt0780504" target="_blank">
+
+        <div class="poster-overlay hover obscure"></div>
+
+        <div class="poster-overlay hover logo-overlay">
+          <img class="logo" src="http://upload.wikimedia.org/wikipedia/commons/3/35/IMDb_logo.svg">
+        </div>
+
+        <div class="poster-overlay hover scores">
+          <div class="overlay-footer">
+            <div class="rating-box">
+              <div class="imdb">7.9</div>
+            </div><div class="rating-box">
+              <div class="positive metacritic">78</div>
+            </div>
+          </div>
+        </div>
+
+      </a>
+    </div><div class="text-container">
+      <p>
+        <a href="http://www.imdb.com/title/tt0780504" class="title" target="_blank">Drive</a>
+        <span class="year">(2011)</span>
+      </p>
+      <p class="genres">
+      
+        <a href="http://www.imdb.com/genre/Crime" class="genre" target="_blank">Crime</a>
+      
+        <a href="http://www.imdb.com/genre/Drama" class="genre" target="_blank">Drama</a>
+      
+      </p>
+      
+        <p class="plot">A mysterious Hollywood stuntman, mechanic and getaway driver lands himself in trouble when he helps out his neighbor. <a href="http://www.imdb.com/title/tt0780504/plotsummary" class="more-plot" target="_blank">More...</a></p>
+      
+    </div>
+  </div>
+  
+  <div class="movie">
+    <div class="poster">
+      
+        <img class="poster-image" src="http://ia.media-imdb.com/images/M/MV5BMjMxNjU0ODU5Ml5BMl5BanBnXkFtZTcwNjI4MzAyOA@@._V1_SX300.jpg">
+      
+      <a href="http://www.imdb.com/title/tt1855199" target="_blank">
+
+        <div class="poster-overlay hover obscure"></div>
+
+        <div class="poster-overlay hover logo-overlay">
+          <img class="logo" src="http://upload.wikimedia.org/wikipedia/commons/3/35/IMDb_logo.svg">
+        </div>
+
+        <div class="poster-overlay hover scores">
+          <div class="overlay-footer">
+            <div class="rating-box">
+              <div class="imdb">7.7</div>
+            </div><div class="rating-box">
+              <div class="positive metacritic">68</div>
+            </div>
+          </div>
+        </div>
+
+      </a>
+    </div><div class="text-container">
+      <p>
+        <a href="http://www.imdb.com/title/tt1855199" class="title" target="_blank">End of Watch</a>
+        <span class="year">(2012)</span>
+      </p>
+      <p class="genres">
+      
+        <a href="http://www.imdb.com/genre/Crime" class="genre" target="_blank">Crime</a>
+      
+        <a href="http://www.imdb.com/genre/Drama" class="genre" target="_blank">Drama</a>
+      
+        <a href="http://www.imdb.com/genre/Thriller" class="genre" target="_blank">Thriller</a>
+      
+      </p>
+      
+        <p class="plot">Shot documentary-style, this film follows the daily grind of two young police officers in LA who are partners and friends, and what happens when they meet criminal forces greater than themselves. <a href="http://www.imdb.com/title/tt1855199/plotsummary" class="more-plot" target="_blank">More...</a></p>
+      
+    </div>
+  </div>
+  
+  <div class="movie">
+    <div class="poster">
+      
+        <img class="poster-image" src="http://ia.media-imdb.com/images/M/MV5BMjAzMzI5OTgzMl5BMl5BanBnXkFtZTgwMTU5MTAwMDE@._V1_SX300.jpg">
+      
+      <a href="http://www.imdb.com/title/tt1731141" target="_blank">
+
+        <div class="poster-overlay hover obscure"></div>
+
+        <div class="poster-overlay hover logo-overlay">
+          <img class="logo" src="http://upload.wikimedia.org/wikipedia/commons/3/35/IMDb_logo.svg">
+        </div>
+
+        <div class="poster-overlay hover scores">
+          <div class="overlay-footer">
+            <div class="rating-box">
+              <div class="imdb">6.9</div>
+            </div><div class="rating-box">
+              <div class="mixed metacritic">51</div>
+            </div>
+          </div>
+        </div>
+
+      </a>
+    </div><div class="text-container">
+      <p>
+        <a href="http://www.imdb.com/title/tt1731141" class="title" target="_blank">Ender&#x27;s Game</a>
+        <span class="year">(2013)</span>
+      </p>
+      <p class="genres">
+      
+        <a href="http://www.imdb.com/genre/Action" class="genre" target="_blank">Action</a>
+      
+        <a href="http://www.imdb.com/genre/Adventure" class="genre" target="_blank">Adventure</a>
+      
+        <a href="http://www.imdb.com/genre/Sci-Fi" class="genre" target="_blank">Sci-Fi</a>
+      
+      </p>
+      
+        <p class="plot">Young Ender Wiggin is recruited by the International Military to lead the fight against the Formics, a genocidal alien race which nearly annihilated the human race in a previous invasion. <a href="http://www.imdb.com/title/tt1731141/plotsummary" class="more-plot" target="_blank">More...</a></p>
+      
+    </div>
+  </div>
+  
+  <div class="movie">
+    <div class="poster">
+      
+        <img class="poster-image" src="http://ia.media-imdb.com/images/M/MV5BMjM1NDcxNDc1NF5BMl5BanBnXkFtZTcwMDgyNjMzMQ@@._V1_SX300.jpg">
+      
+      <a href="http://www.imdb.com/title/tt0480489" target="_blank">
+
+        <div class="poster-overlay hover obscure"></div>
+
+        <div class="poster-overlay hover logo-overlay">
+          <img class="logo" src="http://upload.wikimedia.org/wikipedia/commons/3/35/IMDb_logo.svg">
+        </div>
+
+        <div class="poster-overlay hover scores">
+          <div class="overlay-footer">
+            <div class="rating-box">
+              <div class="imdb">8.3</div>
+            </div><div class="rating-box">
+              <div class="unknown metacritic">N/A</div>
+            </div>
+          </div>
+        </div>
+
+      </a>
+    </div><div class="text-container">
+      <p>
+        <a href="http://www.imdb.com/title/tt0480489" class="title" target="_blank">Erufen rîto</a>
+        <span class="year">(2004–)</span>
+      </p>
+      <p class="genres">
+      
+        <a href="http://www.imdb.com/genre/Animation" class="genre" target="_blank">Animation</a>
+      
+        <a href="http://www.imdb.com/genre/Drama" class="genre" target="_blank">Drama</a>
+      
+        <a href="http://www.imdb.com/genre/Horror" class="genre" target="_blank">Horror</a>
+      
+      </p>
+      
+        <p class="plot">University students Kohta and Yuka (Kohta&#x27;s cousin) save a Diclonius girl called &quot;Lucy&quot; when they see her naked in a beach. In fact &quot;Lucy&quot; is a serial killer who is being searched by the ... <a href="http://www.imdb.com/title/tt0480489/plotsummary" class="more-plot" target="_blank">More...</a></p>
+      
+    </div>
+  </div>
+  
+  <div class="movie">
+    <div class="poster">
+      
+        <img class="poster-image" src="http://ia.media-imdb.com/images/M/MV5BMTc3MTA4NDgzNl5BMl5BanBnXkFtZTcwOTAxNTQyMQ@@._V1_SX300.jpg">
+      
+      <a href="http://www.imdb.com/title/tt0317910" target="_blank">
+
+        <div class="poster-overlay hover obscure"></div>
+
+        <div class="poster-overlay hover logo-overlay">
+          <img class="logo" src="http://upload.wikimedia.org/wikipedia/commons/3/35/IMDb_logo.svg">
+        </div>
+
+        <div class="poster-overlay hover scores">
+          <div class="overlay-footer">
+            <div class="rating-box">
+              <div class="imdb">8.2</div>
+            </div><div class="rating-box">
+              <div class="positive metacritic">87</div>
+            </div>
+          </div>
+        </div>
+
+      </a>
+    </div><div class="text-container">
+      <p>
+        <a href="http://www.imdb.com/title/tt0317910" class="title" target="_blank">The Fog of War: Eleven Lessons from the Life of Robert S. McNamara</a>
+        <span class="year">(2003)</span>
+      </p>
+      <p class="genres">
+      
+        <a href="http://www.imdb.com/genre/Documentary" class="genre" target="_blank">Documentary</a>
+      
+        <a href="http://www.imdb.com/genre/History" class="genre" target="_blank">History</a>
+      
+        <a href="http://www.imdb.com/genre/War" class="genre" target="_blank">War</a>
+      
+      </p>
+      
+        <p class="plot">A film about the former US Secretary of Defense and the various difficult lessons he learned about the nature and conduct of modern war. <a href="http://www.imdb.com/title/tt0317910/plotsummary" class="more-plot" target="_blank">More...</a></p>
+      
+    </div>
+  </div>
+  
+  <div class="movie">
+    <div class="poster">
+      
+        <img class="poster-image" src="http://ia.media-imdb.com/images/M/MV5BMTI3NzMwMzkyNV5BMl5BanBnXkFtZTcwODk4NjQxMw@@._V1_SX300.jpg">
+      
+      <a href="http://www.imdb.com/title/tt1139328" target="_blank">
+
+        <div class="poster-overlay hover obscure"></div>
+
+        <div class="poster-overlay hover logo-overlay">
+          <img class="logo" src="http://upload.wikimedia.org/wikipedia/commons/3/35/IMDb_logo.svg">
+        </div>
+
+        <div class="poster-overlay hover scores">
+          <div class="overlay-footer">
+            <div class="rating-box">
+              <div class="imdb">7.3</div>
+            </div><div class="rating-box">
+              <div class="positive metacritic">77</div>
+            </div>
+          </div>
+        </div>
+
+      </a>
+    </div><div class="text-container">
+      <p>
+        <a href="http://www.imdb.com/title/tt1139328" class="title" target="_blank">The Ghost</a>
+        <span class="year">(2010)</span>
+      </p>
+      <p class="genres">
+      
+        <a href="http://www.imdb.com/genre/Mystery" class="genre" target="_blank">Mystery</a>
+      
+        <a href="http://www.imdb.com/genre/Thriller" class="genre" target="_blank">Thriller</a>
+      
+      </p>
+      
+        <p class="plot">A ghostwriter hired to complete the memoirs of a former British prime minister uncovers secrets that put his own life in jeopardy. <a href="http://www.imdb.com/title/tt1139328/plotsummary" class="more-plot" target="_blank">More...</a></p>
+      
+    </div>
+  </div>
+  
+  <div class="movie">
+    <div class="poster">
+      
+        <img class="poster-image" src="http://ia.media-imdb.com/images/M/MV5BNjE5MzYwMzYxMF5BMl5BanBnXkFtZTcwOTk4MTk0OQ@@._V1_SX300.jpg">
+      
+      <a href="http://www.imdb.com/title/tt1454468" target="_blank">
+
+        <div class="poster-overlay hover obscure"></div>
+
+        <div class="poster-overlay hover logo-overlay">
+          <img class="logo" src="http://upload.wikimedia.org/wikipedia/commons/3/35/IMDb_logo.svg">
+        </div>
+
+        <div class="poster-overlay hover scores">
+          <div class="overlay-footer">
+            <div class="rating-box">
+              <div class="imdb">8.2</div>
+            </div><div class="rating-box">
+              <div class="positive metacritic">96</div>
+            </div>
+          </div>
+        </div>
+
+      </a>
+    </div><div class="text-container">
+      <p>
+        <a href="http://www.imdb.com/title/tt1454468" class="title" target="_blank">Gravity</a>
+        <span class="year">(2013)</span>
+      </p>
+      <p class="genres">
+      
+        <a href="http://www.imdb.com/genre/Drama" class="genre" target="_blank">Drama</a>
+      
+        <a href="http://www.imdb.com/genre/Sci-Fi" class="genre" target="_blank">Sci-Fi</a>
+      
+        <a href="http://www.imdb.com/genre/Thriller" class="genre" target="_blank">Thriller</a>
+      
+      </p>
+      
+        <p class="plot">A medical engineer and an astronaut work together to survive after an accident leaves them adrift in space. <a href="http://www.imdb.com/title/tt1454468/plotsummary" class="more-plot" target="_blank">More...</a></p>
+      
+    </div>
+  </div>
+  
+  <div class="movie">
+    <div class="poster">
+      
+        <img class="poster-image" src="http://ia.media-imdb.com/images/M/MV5BMjI2NjkxMjYwM15BMl5BanBnXkFtZTgwNzc4MTE5MDE@._V1_SX300.jpg">
+      
+      <a href="http://www.imdb.com/title/tt1856010" target="_blank">
+
+        <div class="poster-overlay hover obscure"></div>
+
+        <div class="poster-overlay hover logo-overlay">
+          <img class="logo" src="http://upload.wikimedia.org/wikipedia/commons/3/35/IMDb_logo.svg">
+        </div>
+
+        <div class="poster-overlay hover scores">
+          <div class="overlay-footer">
+            <div class="rating-box">
+              <div class="imdb">9.0</div>
+            </div><div class="rating-box">
+              <div class="unknown metacritic">N/A</div>
+            </div>
+          </div>
+        </div>
+
+      </a>
+    </div><div class="text-container">
+      <p>
+        <a href="http://www.imdb.com/title/tt1856010" class="title" target="_blank">House of Cards</a>
+        <span class="year">(2013–)</span>
+      </p>
+      <p class="genres">
+      
+        <a href="http://www.imdb.com/genre/Drama" class="genre" target="_blank">Drama</a>
+      
+      </p>
+      
+        <p class="plot">A Congressman works with his equally conniving wife to exact revenge on the people who betrayed him. <a href="http://www.imdb.com/title/tt1856010/plotsummary" class="more-plot" target="_blank">More...</a></p>
+      
+    </div>
+  </div>
+  
+  <div class="movie">
+    <div class="poster">
+      
+        <img class="poster-image" src="http://ia.media-imdb.com/images/M/MV5BMjA5NDQyMjc2NF5BMl5BanBnXkFtZTcwMjg5ODcyMw@@._V1_SX300.jpg">
+      
+      <a href="http://www.imdb.com/title/tt0892769" target="_blank">
+
+        <div class="poster-overlay hover obscure"></div>
+
+        <div class="poster-overlay hover logo-overlay">
+          <img class="logo" src="http://upload.wikimedia.org/wikipedia/commons/3/35/IMDb_logo.svg">
+        </div>
+
+        <div class="poster-overlay hover scores">
+          <div class="overlay-footer">
+            <div class="rating-box">
+              <div class="imdb">8.2</div>
+            </div><div class="rating-box">
+              <div class="positive metacritic">74</div>
+            </div>
+          </div>
+        </div>
+
+      </a>
+    </div><div class="text-container">
+      <p>
+        <a href="http://www.imdb.com/title/tt0892769" class="title" target="_blank">How to Train Your Dragon</a>
+        <span class="year">(2010)</span>
+      </p>
+      <p class="genres">
+      
+        <a href="http://www.imdb.com/genre/Animation" class="genre" target="_blank">Animation</a>
+      
+        <a href="http://www.imdb.com/genre/Adventure" class="genre" target="_blank">Adventure</a>
+      
+        <a href="http://www.imdb.com/genre/Comedy" class="genre" target="_blank">Comedy</a>
+      
+      </p>
+      
+        <p class="plot">A hapless young Viking who aspires to hunt dragons becomes the unlikely friend of a young dragon himself, and learns there may be more to the creatures than he assumed. <a href="http://www.imdb.com/title/tt0892769/plotsummary" class="more-plot" target="_blank">More...</a></p>
+      
+    </div>
+  </div>
+  
+  <div class="movie">
+    <div class="poster">
+      
+        <img class="poster-image" src="http://ia.media-imdb.com/images/M/MV5BMjA5NTUzMjQ1MV5BMl5BanBnXkFtZTcwMzc1MzQ4Nw@@._V1_SX300.jpg">
+      
+      <a href="http://www.imdb.com/title/tt1942884" target="_blank">
+
+        <div class="poster-overlay hover obscure"></div>
+
+        <div class="poster-overlay hover logo-overlay">
+          <img class="logo" src="http://upload.wikimedia.org/wikipedia/commons/3/35/IMDb_logo.svg">
+        </div>
+
+        <div class="poster-overlay hover scores">
+          <div class="overlay-footer">
+            <div class="rating-box">
+              <div class="imdb">7.8</div>
+            </div><div class="rating-box">
+              <div class="positive metacritic">73</div>
+            </div>
+          </div>
+        </div>
+
+      </a>
+    </div><div class="text-container">
+      <p>
+        <a href="http://www.imdb.com/title/tt1942884" class="title" target="_blank">Indie Game: The Movie</a>
+        <span class="year">(2012)</span>
+      </p>
+      <p class="genres">
+      
+        <a href="http://www.imdb.com/genre/Documentary" class="genre" target="_blank">Documentary</a>
+      
+      </p>
+      
+        <p class="plot">A documentary that follows the journeys of indie game developers as they create games and release those works, and themselves, to the world. <a href="http://www.imdb.com/title/tt1942884/plotsummary" class="more-plot" target="_blank">More...</a></p>
+      
+    </div>
+  </div>
+  
+  <div class="movie">
+    <div class="poster">
+      
+        <img class="poster-image" src="http://ia.media-imdb.com/images/M/MV5BMTAwNDEyODU1MjheQTJeQWpwZ15BbWU2MDc3NDQwNw@@._V1_SX300.jpg">
+      
+      <a href="http://www.imdb.com/title/tt0758758" target="_blank">
+
+        <div class="poster-overlay hover obscure"></div>
+
+        <div class="poster-overlay hover logo-overlay">
+          <img class="logo" src="http://upload.wikimedia.org/wikipedia/commons/3/35/IMDb_logo.svg">
+        </div>
+
+        <div class="poster-overlay hover scores">
+          <div class="overlay-footer">
+            <div class="rating-box">
+              <div class="imdb">8.2</div>
+            </div><div class="rating-box">
+              <div class="positive metacritic">73</div>
+            </div>
+          </div>
+        </div>
+
+      </a>
+    </div><div class="text-container">
+      <p>
+        <a href="http://www.imdb.com/title/tt0758758" class="title" target="_blank">Into the Wild</a>
+        <span class="year">(2007)</span>
+      </p>
+      <p class="genres">
+      
+        <a href="http://www.imdb.com/genre/Adventure" class="genre" target="_blank">Adventure</a>
+      
+        <a href="http://www.imdb.com/genre/Biography" class="genre" target="_blank">Biography</a>
+      
+        <a href="http://www.imdb.com/genre/Drama" class="genre" target="_blank">Drama</a>
+      
+      </p>
+      
+        <p class="plot">After graduating from Emory University, top student and athlete Christopher McCandless abandons his possessions, gives his entire $24,000 savings account to charity and hitchhikes to Alaska to live in the wilderness. Along the way, Christopher encounters a series of characters that shape his life. <a href="http://www.imdb.com/title/tt0758758/plotsummary" class="more-plot" target="_blank">More...</a></p>
+      
+    </div>
+  </div>
+  
+  <div class="movie">
+    <div class="poster">
+      
+        <img class="poster-image" src="http://ia.media-imdb.com/images/M/MV5BMjEzOTYyODY4OV5BMl5BanBnXkFtZTcwNTk1NjEyMQ@@._V1_SX300.jpg">
+      
+      <a href="http://www.imdb.com/title/tt0260991" target="_blank">
+
+        <div class="poster-overlay hover obscure"></div>
+
+        <div class="poster-overlay hover logo-overlay">
+          <img class="logo" src="http://upload.wikimedia.org/wikipedia/commons/3/35/IMDb_logo.svg">
+        </div>
+
+        <div class="poster-overlay hover scores">
+          <div class="overlay-footer">
+            <div class="rating-box">
+              <div class="imdb">7.9</div>
+            </div><div class="rating-box">
+              <div class="mixed metacritic">58</div>
+            </div>
+          </div>
+        </div>
+
+      </a>
+    </div><div class="text-container">
+      <p>
+        <a href="http://www.imdb.com/title/tt0260991" class="title" target="_blank">J.S.A.: Joint Security Area</a>
+        <span class="year">(2000)</span>
+      </p>
+      <p class="genres">
+      
+        <a href="http://www.imdb.com/genre/Drama" class="genre" target="_blank">Drama</a>
+      
+        <a href="http://www.imdb.com/genre/Thriller" class="genre" target="_blank">Thriller</a>
+      
+        <a href="http://www.imdb.com/genre/War" class="genre" target="_blank">War</a>
+      
+      </p>
+      
+        <p class="plot">In the DMZ separating North and South Korea, two North Korean soldiers have been killed, supposedly by one South Korean soldier. But the 11 bullets found in the bodies, together with the 5 ... <a href="http://www.imdb.com/title/tt0260991/plotsummary" class="more-plot" target="_blank">More...</a></p>
+      
+    </div>
+  </div>
+  
+  <div class="movie">
+    <div class="poster">
+      
+        <img class="poster-image" src="http://ia.media-imdb.com/images/M/MV5BNDcxODkyMjY4MF5BMl5BanBnXkFtZTgwOTk5NTc5MDE@._V1_SX300.jpg">
+      
+      <a href="http://www.imdb.com/title/tt0073195" target="_blank">
+
+        <div class="poster-overlay hover obscure"></div>
+
+        <div class="poster-overlay hover logo-overlay">
+          <img class="logo" src="http://upload.wikimedia.org/wikipedia/commons/3/35/IMDb_logo.svg">
+        </div>
+
+        <div class="poster-overlay hover scores">
+          <div class="overlay-footer">
+            <div class="rating-box">
+              <div class="imdb">8.1</div>
+            </div><div class="rating-box">
+              <div class="positive metacritic">79</div>
+            </div>
+          </div>
+        </div>
+
+      </a>
+    </div><div class="text-container">
+      <p>
+        <a href="http://www.imdb.com/title/tt0073195" class="title" target="_blank">Jaws</a>
+        <span class="year">(1975)</span>
+      </p>
+      <p class="genres">
+      
+        <a href="http://www.imdb.com/genre/Adventure" class="genre" target="_blank">Adventure</a>
+      
+        <a href="http://www.imdb.com/genre/Horror" class="genre" target="_blank">Horror</a>
+      
+        <a href="http://www.imdb.com/genre/Thriller" class="genre" target="_blank">Thriller</a>
+      
+      </p>
+      
+        <p class="plot">When a gigantic great white shark begins to menace the small island community of Amity, a police chief, a marine scientist and grizzled fisherman set out to stop it. <a href="http://www.imdb.com/title/tt0073195/plotsummary" class="more-plot" target="_blank">More...</a></p>
+      
+    </div>
+  </div>
+  
+  <div class="movie">
+    <div class="poster">
+      
+        <img class="poster-image" src="http://ia.media-imdb.com/images/M/MV5BMjQwNTMwODU0Ml5BMl5BanBnXkFtZTcwODkzNjgyMQ@@._V1_SX300.jpg">
+      
+      <a href="http://www.imdb.com/title/tt0373074" target="_blank">
+
+        <div class="poster-overlay hover obscure"></div>
+
+        <div class="poster-overlay hover logo-overlay">
+          <img class="logo" src="http://upload.wikimedia.org/wikipedia/commons/3/35/IMDb_logo.svg">
+        </div>
+
+        <div class="poster-overlay hover scores">
+          <div class="overlay-footer">
+            <div class="rating-box">
+              <div class="imdb">7.8</div>
+            </div><div class="rating-box">
+              <div class="positive metacritic">78</div>
+            </div>
+          </div>
+        </div>
+
+      </a>
+    </div><div class="text-container">
+      <p>
+        <a href="http://www.imdb.com/title/tt0373074" class="title" target="_blank">Kung Fu Hustle</a>
+        <span class="year">(2004)</span>
+      </p>
+      <p class="genres">
+      
+        <a href="http://www.imdb.com/genre/Action" class="genre" target="_blank">Action</a>
+      
+        <a href="http://www.imdb.com/genre/Comedy" class="genre" target="_blank">Comedy</a>
+      
+        <a href="http://www.imdb.com/genre/Crime" class="genre" target="_blank">Crime</a>
+      
+      </p>
+      
+        <p class="plot">In Shanghai, China in the 1940s, a wannabe gangster aspires to join the notorious &quot;Axe Gang&quot; while residents of a housing complex exhibit extraordinary powers in defending their turf. <a href="http://www.imdb.com/title/tt0373074/plotsummary" class="more-plot" target="_blank">More...</a></p>
+      
+    </div>
+  </div>
+  
+  <div class="movie">
+    <div class="poster">
+      
+        <img class="poster-image" src="http://ia.media-imdb.com/images/M/MV5BMTQ3NjAwMDc3MV5BMl5BanBnXkFtZTcwNDg2NTgxMQ@@._V1_SX300.jpg">
+      
+      <a href="http://www.imdb.com/title/tt0113677" target="_blank">
+
+        <div class="poster-overlay hover obscure"></div>
+
+        <div class="poster-overlay hover logo-overlay">
+          <img class="logo" src="http://upload.wikimedia.org/wikipedia/commons/3/35/IMDb_logo.svg">
+        </div>
+
+        <div class="poster-overlay hover scores">
+          <div class="overlay-footer">
+            <div class="rating-box">
+              <div class="imdb">7.5</div>
+            </div><div class="rating-box">
+              <div class="unknown metacritic">N/A</div>
+            </div>
+          </div>
+        </div>
+
+      </a>
+    </div><div class="text-container">
+      <p>
+        <a href="http://www.imdb.com/title/tt0113677" class="title" target="_blank">Living in Oblivion</a>
+        <span class="year">(1995)</span>
+      </p>
+      <p class="genres">
+      
+        <a href="http://www.imdb.com/genre/Comedy" class="genre" target="_blank">Comedy</a>
+      
+        <a href="http://www.imdb.com/genre/Drama" class="genre" target="_blank">Drama</a>
+      
+      </p>
+      
+        <p class="plot">Film about filmmaking. It takes place during one day on set of non-budget movie. Ultimate tribute to all independent filmmakers. <a href="http://www.imdb.com/title/tt0113677/plotsummary" class="more-plot" target="_blank">More...</a></p>
+      
+    </div>
+  </div>
+  
+  <div class="movie">
+    <div class="poster">
+      
+        <div class="empty-placeholder"></div>
+      
+      <a href="http://www.imdb.com/title/tt3227922" target="_blank">
+
+        <div class="poster-overlay hover obscure"></div>
+
+        <div class="poster-overlay hover logo-overlay">
+          <img class="logo" src="http://upload.wikimedia.org/wikipedia/commons/3/35/IMDb_logo.svg">
+        </div>
+
+        <div class="poster-overlay hover scores">
+          <div class="overlay-footer">
+            <div class="rating-box">
+              <div class="imdb">N/A</div>
+            </div><div class="rating-box">
+              <div class="unknown metacritic">N/A</div>
+            </div>
+          </div>
+        </div>
+
+      </a>
+    </div><div class="text-container">
+      <p>
+        <a href="http://www.imdb.com/title/tt3227922" class="title" target="_blank">Macaframa</a>
+        <span class="year">(2010)</span>
+      </p>
+      <p class="genres">
+      
+        <a href="http://www.imdb.com/genre/Documentary" class="genre" target="_blank">Documentary</a>
+      
+      </p>
+      
+    </div>
+  </div>
+  
+  <div class="movie">
+    <div class="poster">
+      
+        <img class="poster-image" src="http://ia.media-imdb.com/images/M/MV5BMjM3NDI5OTA5Nl5BMl5BanBnXkFtZTgwNzE4ODYxMTE@._V1_SX300.jpg">
+      
+      <a href="http://www.imdb.com/title/tt0110475" target="_blank">
+
+        <div class="poster-overlay hover obscure"></div>
+
+        <div class="poster-overlay hover logo-overlay">
+          <img class="logo" src="http://upload.wikimedia.org/wikipedia/commons/3/35/IMDb_logo.svg">
+        </div>
+
+        <div class="poster-overlay hover scores">
+          <div class="overlay-footer">
+            <div class="rating-box">
+              <div class="imdb">6.8</div>
+            </div><div class="rating-box">
+              <div class="mixed metacritic">56</div>
+            </div>
+          </div>
+        </div>
+
+      </a>
+    </div><div class="text-container">
+      <p>
+        <a href="http://www.imdb.com/title/tt0110475" class="title" target="_blank">The Mask</a>
+        <span class="year">(1994)</span>
+      </p>
+      <p class="genres">
+      
+        <a href="http://www.imdb.com/genre/Comedy" class="genre" target="_blank">Comedy</a>
+      
+        <a href="http://www.imdb.com/genre/Crime" class="genre" target="_blank">Crime</a>
+      
+        <a href="http://www.imdb.com/genre/Fantasy" class="genre" target="_blank">Fantasy</a>
+      
+      </p>
+      
+        <p class="plot">Bank clerk Stanley Ipkiss is transformed into a manic super-hero when he wears a mysterious mask. <a href="http://www.imdb.com/title/tt0110475/plotsummary" class="more-plot" target="_blank">More...</a></p>
+      
+    </div>
+  </div>
+  
+  <div class="movie">
+    <div class="poster">
+      
+        <img class="poster-image" src="http://ia.media-imdb.com/images/M/MV5BMjIwOTQwNzg1MV5BMl5BanBnXkFtZTcwODc4MDU4Mg@@._V1_SX300.jpg">
+      
+      <a href="http://www.imdb.com/title/tt1234548" target="_blank">
+
+        <div class="poster-overlay hover obscure"></div>
+
+        <div class="poster-overlay hover logo-overlay">
+          <img class="logo" src="http://upload.wikimedia.org/wikipedia/commons/3/35/IMDb_logo.svg">
+        </div>
+
+        <div class="poster-overlay hover scores">
+          <div class="overlay-footer">
+            <div class="rating-box">
+              <div class="imdb">6.3</div>
+            </div><div class="rating-box">
+              <div class="mixed metacritic">54</div>
+            </div>
+          </div>
+        </div>
+
+      </a>
+    </div><div class="text-container">
+      <p>
+        <a href="http://www.imdb.com/title/tt1234548" class="title" target="_blank">The Men Who Stare at Goats</a>
+        <span class="year">(2009)</span>
+      </p>
+      <p class="genres">
+      
+        <a href="http://www.imdb.com/genre/Comedy" class="genre" target="_blank">Comedy</a>
+      
+        <a href="http://www.imdb.com/genre/War" class="genre" target="_blank">War</a>
+      
+      </p>
+      
+        <p class="plot">A reporter in Iraq might just have the story of a lifetime when he meets Lyn Cassady, a guy who claims to be a former member of the U.S. Army&#x27;s New Earth Army, a unit that employs paranormal powers in their missions. <a href="http://www.imdb.com/title/tt1234548/plotsummary" class="more-plot" target="_blank">More...</a></p>
+      
+    </div>
+  </div>
+  
+  <div class="movie">
+    <div class="poster">
+      
+        <img class="poster-image" src="http://ia.media-imdb.com/images/M/MV5BMTY4MTUxMjQ5OV5BMl5BanBnXkFtZTcwNTUyMzg5Ng@@._V1_SX300.jpg">
+      
+      <a href="http://www.imdb.com/title/tt1229238" target="_blank">
+
+        <div class="poster-overlay hover obscure"></div>
+
+        <div class="poster-overlay hover logo-overlay">
+          <img class="logo" src="http://upload.wikimedia.org/wikipedia/commons/3/35/IMDb_logo.svg">
+        </div>
+
+        <div class="poster-overlay hover scores">
+          <div class="overlay-footer">
+            <div class="rating-box">
+              <div class="imdb">7.4</div>
+            </div><div class="rating-box">
+              <div class="positive metacritic">73</div>
+            </div>
+          </div>
+        </div>
+
+      </a>
+    </div><div class="text-container">
+      <p>
+        <a href="http://www.imdb.com/title/tt1229238" class="title" target="_blank">Mission: Impossible - Ghost Protocol</a>
+        <span class="year">(2011)</span>
+      </p>
+      <p class="genres">
+      
+        <a href="http://www.imdb.com/genre/Action" class="genre" target="_blank">Action</a>
+      
+        <a href="http://www.imdb.com/genre/Thriller" class="genre" target="_blank">Thriller</a>
+      
+      </p>
+      
+        <p class="plot">The IMF is shut down when it&#x27;s implicated in the bombing of the Kremlin, causing Ethan Hunt and his new team to go rogue to clear their organization&#x27;s name. <a href="http://www.imdb.com/title/tt1229238/plotsummary" class="more-plot" target="_blank">More...</a></p>
+      
+    </div>
+  </div>
+  
+  <div class="movie">
+    <div class="poster">
+      
+        <img class="poster-image" src="http://ia.media-imdb.com/images/M/MV5BMTY0NDY3MDMxN15BMl5BanBnXkFtZTcwOTM5NzMzOQ@@._V1_SX300.jpg">
+      
+      <a href="http://www.imdb.com/title/tt1670345" target="_blank">
+
+        <div class="poster-overlay hover obscure"></div>
+
+        <div class="poster-overlay hover logo-overlay">
+          <img class="logo" src="http://upload.wikimedia.org/wikipedia/commons/3/35/IMDb_logo.svg">
+        </div>
+
+        <div class="poster-overlay hover scores">
+          <div class="overlay-footer">
+            <div class="rating-box">
+              <div class="imdb">7.3</div>
+            </div><div class="rating-box">
+              <div class="mixed metacritic">50</div>
+            </div>
+          </div>
+        </div>
+
+      </a>
+    </div><div class="text-container">
+      <p>
+        <a href="http://www.imdb.com/title/tt1670345" class="title" target="_blank">Now You See Me</a>
+        <span class="year">(2013)</span>
+      </p>
+      <p class="genres">
+      
+        <a href="http://www.imdb.com/genre/Crime" class="genre" target="_blank">Crime</a>
+      
+        <a href="http://www.imdb.com/genre/Mystery" class="genre" target="_blank">Mystery</a>
+      
+        <a href="http://www.imdb.com/genre/Thriller" class="genre" target="_blank">Thriller</a>
+      
+      </p>
+      
+        <p class="plot">An FBI agent and an Interpol detective track a team of illusionists who pull off bank heists during their performances and reward their audiences with the money. <a href="http://www.imdb.com/title/tt1670345/plotsummary" class="more-plot" target="_blank">More...</a></p>
+      
+    </div>
+  </div>
+  
+  <div class="movie">
+    <div class="poster">
+      
+        <img class="poster-image" src="http://ia.media-imdb.com/images/M/MV5BMTI0NDQ5MTM2MV5BMl5BanBnXkFtZTcwOTIwMjk2MQ@@._V1_SX300.jpg">
+      
+      <a href="http://www.imdb.com/title/tt1077258" target="_blank">
+
+        <div class="poster-overlay hover obscure"></div>
+
+        <div class="poster-overlay hover logo-overlay">
+          <img class="logo" src="http://upload.wikimedia.org/wikipedia/commons/3/35/IMDb_logo.svg">
+        </div>
+
+        <div class="poster-overlay hover scores">
+          <div class="overlay-footer">
+            <div class="rating-box">
+              <div class="imdb">7.3</div>
+            </div><div class="rating-box">
+              <div class="unknown metacritic">N/A</div>
+            </div>
+          </div>
+        </div>
+
+      </a>
+    </div><div class="text-container">
+      <p>
+        <a href="http://www.imdb.com/title/tt1077258" class="title" target="_blank">Planet Terror</a>
+        <span class="year">(2007)</span>
+      </p>
+      <p class="genres">
+      
+        <a href="http://www.imdb.com/genre/Action" class="genre" target="_blank">Action</a>
+      
+        <a href="http://www.imdb.com/genre/Horror" class="genre" target="_blank">Horror</a>
+      
+      </p>
+      
+        <p class="plot">After an experimental bio-weapon is released, turning thousands into zombie-like creatures, it&#x27;s up to a rag-tag group of survivors to stop the infected and those behind its release. <a href="http://www.imdb.com/title/tt1077258/plotsummary" class="more-plot" target="_blank">More...</a></p>
+      
+    </div>
+  </div>
+  
+  <div class="movie">
+    <div class="poster">
+      
+        <img class="poster-image" src="http://ia.media-imdb.com/images/M/MV5BMTg4MTU1MzgwOV5BMl5BanBnXkFtZTcwNjM1MTAwMQ@@._V1_SX300.jpg">
+      
+      <a href="http://www.imdb.com/title/tt0368226" target="_blank">
+
+        <div class="poster-overlay hover obscure"></div>
+
+        <div class="poster-overlay hover logo-overlay">
+          <img class="logo" src="http://upload.wikimedia.org/wikipedia/commons/3/35/IMDb_logo.svg">
+        </div>
+
+        <div class="poster-overlay hover scores">
+          <div class="overlay-footer">
+            <div class="rating-box">
+              <div class="imdb">3.4</div>
+            </div><div class="rating-box">
+              <div class="unknown metacritic">N/A</div>
+            </div>
+          </div>
+        </div>
+
+      </a>
+    </div><div class="text-container">
+      <p>
+        <a href="http://www.imdb.com/title/tt0368226" class="title" target="_blank">The Room</a>
+        <span class="year">(2003)</span>
+      </p>
+      <p class="genres">
+      
+        <a href="http://www.imdb.com/genre/Drama" class="genre" target="_blank">Drama</a>
+      
+      </p>
+      
+        <p class="plot">Johnny is a successful banker who lives happily in a San Francisco townhouse with his fiancée, Lisa. One day, inexplicably, she gets bored of him and decides to seduce Johnny&#x27;s best friend, Mark. From there, nothing will be the same again. <a href="http://www.imdb.com/title/tt0368226/plotsummary" class="more-plot" target="_blank">More...</a></p>
+      
+    </div>
+  </div>
+  
+  <div class="movie">
+    <div class="poster">
+      
+        <img class="poster-image" src="http://ia.media-imdb.com/images/M/MV5BMTkyNzQ2MjkzNl5BMl5BanBnXkFtZTgwODM2MzcxMTE@._V1_SX300.jpg">
+      
+      <a href="http://www.imdb.com/title/tt0070666" target="_blank">
+
+        <div class="poster-overlay hover obscure"></div>
+
+        <div class="poster-overlay hover logo-overlay">
+          <img class="logo" src="http://upload.wikimedia.org/wikipedia/commons/3/35/IMDb_logo.svg">
+        </div>
+
+        <div class="poster-overlay hover scores">
+          <div class="overlay-footer">
+            <div class="rating-box">
+              <div class="imdb">7.8</div>
+            </div><div class="rating-box">
+              <div class="positive metacritic">87</div>
+            </div>
+          </div>
+        </div>
+
+      </a>
+    </div><div class="text-container">
+      <p>
+        <a href="http://www.imdb.com/title/tt0070666" class="title" target="_blank">Serpico</a>
+        <span class="year">(1973)</span>
+      </p>
+      <p class="genres">
+      
+        <a href="http://www.imdb.com/genre/Biography" class="genre" target="_blank">Biography</a>
+      
+        <a href="http://www.imdb.com/genre/Crime" class="genre" target="_blank">Crime</a>
+      
+        <a href="http://www.imdb.com/genre/Drama" class="genre" target="_blank">Drama</a>
+      
+      </p>
+      
+        <p class="plot">The true story about an honest New York cop who blew the whistle on rampant corruption in the force only to have his comrades turn against him. <a href="http://www.imdb.com/title/tt0070666/plotsummary" class="more-plot" target="_blank">More...</a></p>
+      
+    </div>
+  </div>
+  
+  <div class="movie">
+    <div class="poster">
+      
+        <img class="poster-image" src="http://ia.media-imdb.com/images/M/MV5BMTgwMzUxMjc0M15BMl5BanBnXkFtZTcwMzQ2MjYyOA@@._V1_SX300.jpg">
+      
+      <a href="http://www.imdb.com/title/tt1931533" target="_blank">
+
+        <div class="poster-overlay hover obscure"></div>
+
+        <div class="poster-overlay hover logo-overlay">
+          <img class="logo" src="http://upload.wikimedia.org/wikipedia/commons/3/35/IMDb_logo.svg">
+        </div>
+
+        <div class="poster-overlay hover scores">
+          <div class="overlay-footer">
+            <div class="rating-box">
+              <div class="imdb">7.2</div>
+            </div><div class="rating-box">
+              <div class="positive metacritic">66</div>
+            </div>
+          </div>
+        </div>
+
+      </a>
+    </div><div class="text-container">
+      <p>
+        <a href="http://www.imdb.com/title/tt1931533" class="title" target="_blank">Seven Psychopaths</a>
+        <span class="year">(2012)</span>
+      </p>
+      <p class="genres">
+      
+        <a href="http://www.imdb.com/genre/Comedy" class="genre" target="_blank">Comedy</a>
+      
+        <a href="http://www.imdb.com/genre/Crime" class="genre" target="_blank">Crime</a>
+      
+        <a href="http://www.imdb.com/genre/Thriller" class="genre" target="_blank">Thriller</a>
+      
+      </p>
+      
+        <p class="plot">A struggling screenwriter inadvertently becomes entangled in the Los Angeles criminal underworld after his oddball friends kidnap a gangster&#x27;s beloved Shih Tzu. <a href="http://www.imdb.com/title/tt1931533/plotsummary" class="more-plot" target="_blank">More...</a></p>
+      
+    </div>
+  </div>
+  
+  <div class="movie">
+    <div class="poster">
+      
+        <img class="poster-image" src="http://ia.media-imdb.com/images/M/MV5BMTk5NzgyNDAwNl5BMl5BanBnXkFtZTcwOTgyNjgyMQ@@._V1_SX300.jpg">
+      
+      <a href="http://www.imdb.com/title/tt0035317" target="_blank">
+
+        <div class="poster-overlay hover obscure"></div>
+
+        <div class="poster-overlay hover logo-overlay">
+          <img class="logo" src="http://upload.wikimedia.org/wikipedia/commons/3/35/IMDb_logo.svg">
+        </div>
+
+        <div class="poster-overlay hover scores">
+          <div class="overlay-footer">
+            <div class="rating-box">
+              <div class="imdb">6.8</div>
+            </div><div class="rating-box">
+              <div class="unknown metacritic">N/A</div>
+            </div>
+          </div>
+        </div>
+
+      </a>
+    </div><div class="text-container">
+      <p>
+        <a href="http://www.imdb.com/title/tt0035317" class="title" target="_blank">Sherlock Holmes and the Secret Weapon</a>
+        <span class="year">(1942)</span>
+      </p>
+      <p class="genres">
+      
+        <a href="http://www.imdb.com/genre/Adventure" class="genre" target="_blank">Adventure</a>
+      
+        <a href="http://www.imdb.com/genre/Crime" class="genre" target="_blank">Crime</a>
+      
+        <a href="http://www.imdb.com/genre/Drama" class="genre" target="_blank">Drama</a>
+      
+      </p>
+      
+        <p class="plot">Sherlock Holmes and Doctor Watson must protect a Swiss inventor of an advanced bomb sight from falling into German hands. <a href="http://www.imdb.com/title/tt0035317/plotsummary" class="more-plot" target="_blank">More...</a></p>
+      
+    </div>
+  </div>
+  
+  <div class="movie">
+    <div class="poster">
+      
+        <img class="poster-image" src="http://ia.media-imdb.com/images/M/MV5BMTc2MTQxNDI5MV5BMl5BanBnXkFtZTYwNjkzMDc4._V1_SX300.jpg">
+      
+      <a href="http://www.imdb.com/title/tt0167404" target="_blank">
+
+        <div class="poster-overlay hover obscure"></div>
+
+        <div class="poster-overlay hover logo-overlay">
+          <img class="logo" src="http://upload.wikimedia.org/wikipedia/commons/3/35/IMDb_logo.svg">
+        </div>
+
+        <div class="poster-overlay hover scores">
+          <div class="overlay-footer">
+            <div class="rating-box">
+              <div class="imdb">8.2</div>
+            </div><div class="rating-box">
+              <div class="positive metacritic">64</div>
+            </div>
+          </div>
+        </div>
+
+      </a>
+    </div><div class="text-container">
+      <p>
+        <a href="http://www.imdb.com/title/tt0167404" class="title" target="_blank">The Sixth Sense</a>
+        <span class="year">(1999)</span>
+      </p>
+      <p class="genres">
+      
+        <a href="http://www.imdb.com/genre/Drama" class="genre" target="_blank">Drama</a>
+      
+        <a href="http://www.imdb.com/genre/Mystery" class="genre" target="_blank">Mystery</a>
+      
+        <a href="http://www.imdb.com/genre/Thriller" class="genre" target="_blank">Thriller</a>
+      
+      </p>
+      
+        <p class="plot">A boy who communicates with spirits that don&#x27;t know they&#x27;re dead seeks the help of a disheartened child psychologist. <a href="http://www.imdb.com/title/tt0167404/plotsummary" class="more-plot" target="_blank">More...</a></p>
+      
+    </div>
+  </div>
+  
+  <div class="movie">
+    <div class="poster">
+      
+        <img class="poster-image" src="http://ia.media-imdb.com/images/M/MV5BNjI2OTU4NDcyNl5BMl5BanBnXkFtZTYwNTM2OTU3._V1_SX300.jpg">
+      
+      <a href="http://www.imdb.com/title/tt0266987" target="_blank">
+
+        <div class="poster-overlay hover obscure"></div>
+
+        <div class="poster-overlay hover logo-overlay">
+          <img class="logo" src="http://upload.wikimedia.org/wikipedia/commons/3/35/IMDb_logo.svg">
+        </div>
+
+        <div class="poster-overlay hover scores">
+          <div class="overlay-footer">
+            <div class="rating-box">
+              <div class="imdb">7.0</div>
+            </div><div class="rating-box">
+              <div class="positive metacritic">63</div>
+            </div>
+          </div>
+        </div>
+
+      </a>
+    </div><div class="text-container">
+      <p>
+        <a href="http://www.imdb.com/title/tt0266987" class="title" target="_blank">Spy Game</a>
+        <span class="year">(2001)</span>
+      </p>
+      <p class="genres">
+      
+        <a href="http://www.imdb.com/genre/Action" class="genre" target="_blank">Action</a>
+      
+        <a href="http://www.imdb.com/genre/Crime" class="genre" target="_blank">Crime</a>
+      
+        <a href="http://www.imdb.com/genre/Thriller" class="genre" target="_blank">Thriller</a>
+      
+      </p>
+      
+        <p class="plot">Retiring CIA agent Nathan Muir recalls his training of Tom Bishop while working against agency politics to free him from his Chinese captors. <a href="http://www.imdb.com/title/tt0266987/plotsummary" class="more-plot" target="_blank">More...</a></p>
+      
+    </div>
+  </div>
+  
+  <div class="movie">
+    <div class="poster">
+      
+        <div class="empty-placeholder"></div>
+      
+      <a href="http://www.imdb.com/title/tt1910272" target="_blank">
+
+        <div class="poster-overlay hover obscure"></div>
+
+        <div class="poster-overlay hover logo-overlay">
+          <img class="logo" src="http://upload.wikimedia.org/wikipedia/commons/3/35/IMDb_logo.svg">
+        </div>
+
+        <div class="poster-overlay hover scores">
+          <div class="overlay-footer">
+            <div class="rating-box">
+              <div class="imdb">8.5</div>
+            </div><div class="rating-box">
+              <div class="unknown metacritic">N/A</div>
+            </div>
+          </div>
+        </div>
+
+      </a>
+    </div><div class="text-container">
+      <p>
+        <a href="http://www.imdb.com/title/tt1910272" class="title" target="_blank">Steins;Gate</a>
+        <span class="year">(2011–)</span>
+      </p>
+      <p class="genres">
+      
+        <a href="http://www.imdb.com/genre/Animation" class="genre" target="_blank">Animation</a>
+      
+        <a href="http://www.imdb.com/genre/Comedy" class="genre" target="_blank">Comedy</a>
+      
+        <a href="http://www.imdb.com/genre/Drama" class="genre" target="_blank">Drama</a>
+      
+      </p>
+      
+        <p class="plot">Okabe Rintarou, an university student who refers to himself as Crazy Mad Scientist Hououin Kyouma and his lab&#x27;s members work on a microwave device that can transfer messages to the past. ... <a href="http://www.imdb.com/title/tt1910272/plotsummary" class="more-plot" target="_blank">More...</a></p>
+      
+    </div>
+  </div>
+  
+  <div class="movie">
+    <div class="poster">
+      
+        <img class="poster-image" src="http://ia.media-imdb.com/images/M/MV5BMTIwMTEyNDQ2MF5BMl5BanBnXkFtZTYwMzcxNjc5._V1_SX300.jpg">
+      
+      <a href="http://www.imdb.com/title/tt0164184" target="_blank">
+
+        <div class="poster-overlay hover obscure"></div>
+
+        <div class="poster-overlay hover logo-overlay">
+          <img class="logo" src="http://upload.wikimedia.org/wikipedia/commons/3/35/IMDb_logo.svg">
+        </div>
+
+        <div class="poster-overlay hover scores">
+          <div class="overlay-footer">
+            <div class="rating-box">
+              <div class="imdb">6.4</div>
+            </div><div class="rating-box">
+              <div class="mixed metacritic">45</div>
+            </div>
+          </div>
+        </div>
+
+      </a>
+    </div><div class="text-container">
+      <p>
+        <a href="http://www.imdb.com/title/tt0164184" class="title" target="_blank">The Sum of All Fears</a>
+        <span class="year">(2002)</span>
+      </p>
+      <p class="genres">
+      
+        <a href="http://www.imdb.com/genre/Action" class="genre" target="_blank">Action</a>
+      
+        <a href="http://www.imdb.com/genre/Drama" class="genre" target="_blank">Drama</a>
+      
+        <a href="http://www.imdb.com/genre/Thriller" class="genre" target="_blank">Thriller</a>
+      
+      </p>
+      
+        <p class="plot">CIA analyst Jack Ryan must thwart the plans of a terrorist faction that threatens to induce a catastrophic conflict between the United States and Russia&#x27;s newly elected president by detonating a nuclear weapon at a football game in Baltimore. <a href="http://www.imdb.com/title/tt0164184/plotsummary" class="more-plot" target="_blank">More...</a></p>
+      
+    </div>
+  </div>
+  
+  <div class="movie">
+    <div class="poster">
+      
+        <img class="poster-image" src="http://ia.media-imdb.com/images/M/MV5BMjA0MjIyOTI3MF5BMl5BanBnXkFtZTcwODM5NTY5MQ@@._V1_SX300.jpg">
+      
+      <a href="http://www.imdb.com/title/tt0383028" target="_blank">
+
+        <div class="poster-overlay hover obscure"></div>
+
+        <div class="poster-overlay hover logo-overlay">
+          <img class="logo" src="http://upload.wikimedia.org/wikipedia/commons/3/35/IMDb_logo.svg">
+        </div>
+
+        <div class="poster-overlay hover scores">
+          <div class="overlay-footer">
+            <div class="rating-box">
+              <div class="imdb">7.4</div>
+            </div><div class="rating-box">
+              <div class="positive metacritic">67</div>
+            </div>
+          </div>
+        </div>
+
+      </a>
+    </div><div class="text-container">
+      <p>
+        <a href="http://www.imdb.com/title/tt0383028" class="title" target="_blank">Synecdoche, New York</a>
+        <span class="year">(2008)</span>
+      </p>
+      <p class="genres">
+      
+        <a href="http://www.imdb.com/genre/Drama" class="genre" target="_blank">Drama</a>
+      
+      </p>
+      
+        <p class="plot">A theatre director struggles with his work, and the women in his life, as he creates a life-size replica of New York City inside a warehouse as part of his new play. <a href="http://www.imdb.com/title/tt0383028/plotsummary" class="more-plot" target="_blank">More...</a></p>
+      
+    </div>
+  </div>
+  
+  <div class="movie">
+    <div class="poster">
+      
+        <img class="poster-image" src="http://ia.media-imdb.com/images/M/MV5BMjA2MTQwMTg0N15BMl5BanBnXkFtZTcwOTE5NjEzMQ@@._V1_SX300.jpg">
+      
+      <a href="http://www.imdb.com/title/tt0365737" target="_blank">
+
+        <div class="poster-overlay hover obscure"></div>
+
+        <div class="poster-overlay hover logo-overlay">
+          <img class="logo" src="http://upload.wikimedia.org/wikipedia/commons/3/35/IMDb_logo.svg">
+        </div>
+
+        <div class="poster-overlay hover scores">
+          <div class="overlay-footer">
+            <div class="rating-box">
+              <div class="imdb">7.0</div>
+            </div><div class="rating-box">
+              <div class="positive metacritic">76</div>
+            </div>
+          </div>
+        </div>
+
+      </a>
+    </div><div class="text-container">
+      <p>
+        <a href="http://www.imdb.com/title/tt0365737" class="title" target="_blank">Syriana</a>
+        <span class="year">(2005)</span>
+      </p>
+      <p class="genres">
+      
+        <a href="http://www.imdb.com/genre/Drama" class="genre" target="_blank">Drama</a>
+      
+        <a href="http://www.imdb.com/genre/Thriller" class="genre" target="_blank">Thriller</a>
+      
+      </p>
+      
+        <p class="plot">A politically-charged epic about the state of the oil industry in the hands of those personally involved and affected by it. <a href="http://www.imdb.com/title/tt0365737/plotsummary" class="more-plot" target="_blank">More...</a></p>
+      
+    </div>
+  </div>
+  
+  <div class="movie">
+    <div class="poster">
+      
+        <img class="poster-image" src="http://ia.media-imdb.com/images/M/MV5BMTc1MDYxMjk1Ml5BMl5BanBnXkFtZTcwMjE4MzcyMQ@@._V1_SX300.jpg">
+      
+      <a href="http://www.imdb.com/title/tt0386064" target="_blank">
+
+        <div class="poster-overlay hover obscure"></div>
+
+        <div class="poster-overlay hover logo-overlay">
+          <img class="logo" src="http://upload.wikimedia.org/wikipedia/commons/3/35/IMDb_logo.svg">
+        </div>
+
+        <div class="poster-overlay hover scores">
+          <div class="overlay-footer">
+            <div class="rating-box">
+              <div class="imdb">8.2</div>
+            </div><div class="rating-box">
+              <div class="positive metacritic">64</div>
+            </div>
+          </div>
+        </div>
+
+      </a>
+    </div><div class="text-container">
+      <p>
+        <a href="http://www.imdb.com/title/tt0386064" class="title" target="_blank">Tae Guk Gi: The Brotherhood of War</a>
+        <span class="year">(2004)</span>
+      </p>
+      <p class="genres">
+      
+        <a href="http://www.imdb.com/genre/Action" class="genre" target="_blank">Action</a>
+      
+        <a href="http://www.imdb.com/genre/Drama" class="genre" target="_blank">Drama</a>
+      
+        <a href="http://www.imdb.com/genre/War" class="genre" target="_blank">War</a>
+      
+      </p>
+      
+        <p class="plot">A drama about the fate of brothers forced to fight in the Korean War. <a href="http://www.imdb.com/title/tt0386064/plotsummary" class="more-plot" target="_blank">More...</a></p>
+      
+    </div>
+  </div>
+  
+  <div class="movie">
+    <div class="poster">
+      
+        <img class="poster-image" src="http://ia.media-imdb.com/images/M/MV5BMjA2MjA1MTA0OF5BMl5BanBnXkFtZTcwNTA5MTIzMQ@@._V1_SX300.jpg">
+      
+      <a href="http://www.imdb.com/title/tt0181865" target="_blank">
+
+        <div class="poster-overlay hover obscure"></div>
+
+        <div class="poster-overlay hover logo-overlay">
+          <img class="logo" src="http://upload.wikimedia.org/wikipedia/commons/3/35/IMDb_logo.svg">
+        </div>
+
+        <div class="poster-overlay hover scores">
+          <div class="overlay-footer">
+            <div class="rating-box">
+              <div class="imdb">7.7</div>
+            </div><div class="rating-box">
+              <div class="positive metacritic">86</div>
+            </div>
+          </div>
+        </div>
+
+      </a>
+    </div><div class="text-container">
+      <p>
+        <a href="http://www.imdb.com/title/tt0181865" class="title" target="_blank">Traffic</a>
+        <span class="year">(2000)</span>
+      </p>
+      <p class="genres">
+      
+        <a href="http://www.imdb.com/genre/Crime" class="genre" target="_blank">Crime</a>
+      
+        <a href="http://www.imdb.com/genre/Drama" class="genre" target="_blank">Drama</a>
+      
+        <a href="http://www.imdb.com/genre/Thriller" class="genre" target="_blank">Thriller</a>
+      
+      </p>
+      
+        <p class="plot">A conservative judge is appointed by the President to spearhead America&#x27;s escalating war against drugs, only to discover that his teenage daughter is an addict. <a href="http://www.imdb.com/title/tt0181865/plotsummary" class="more-plot" target="_blank">More...</a></p>
+      
+    </div>
+  </div>
+  
+  <div class="movie">
+    <div class="poster">
+      
+        <img class="poster-image" src="http://ia.media-imdb.com/images/M/MV5BMTc1MzY0MTcyMV5BMl5BanBnXkFtZTcwMzE3Njk3OA@@._V1_SX300.jpg">
+      
+      <a href="http://www.imdb.com/title/tt0094226" target="_blank">
+
+        <div class="poster-overlay hover obscure"></div>
+
+        <div class="poster-overlay hover logo-overlay">
+          <img class="logo" src="http://upload.wikimedia.org/wikipedia/commons/3/35/IMDb_logo.svg">
+        </div>
+
+        <div class="poster-overlay hover scores">
+          <div class="overlay-footer">
+            <div class="rating-box">
+              <div class="imdb">8.0</div>
+            </div><div class="rating-box">
+              <div class="unknown metacritic">N/A</div>
+            </div>
+          </div>
+        </div>
+
+      </a>
+    </div><div class="text-container">
+      <p>
+        <a href="http://www.imdb.com/title/tt0094226" class="title" target="_blank">The Untouchables</a>
+        <span class="year">(1987)</span>
+      </p>
+      <p class="genres">
+      
+        <a href="http://www.imdb.com/genre/Crime" class="genre" target="_blank">Crime</a>
+      
+        <a href="http://www.imdb.com/genre/Drama" class="genre" target="_blank">Drama</a>
+      
+        <a href="http://www.imdb.com/genre/History" class="genre" target="_blank">History</a>
+      
+      </p>
+      
+        <p class="plot">Federal Agent Eliot Ness sets out to stop Al Capone; because of rampant corruption, he assembles a small, hand-picked team. <a href="http://www.imdb.com/title/tt0094226/plotsummary" class="more-plot" target="_blank">More...</a></p>
+      
+    </div>
+  </div>
+  
+  <div class="movie">
+    <div class="poster">
+      
+        <img class="poster-image" src="http://ia.media-imdb.com/images/M/MV5BMTgxOTE1NjA0OV5BMl5BanBnXkFtZTcwODM3MTYxMQ@@._V1_SX300.jpg">
+      
+      <a href="http://www.imdb.com/title/tt0096438" target="_blank">
+
+        <div class="poster-overlay hover obscure"></div>
+
+        <div class="poster-overlay hover logo-overlay">
+          <img class="logo" src="http://upload.wikimedia.org/wikipedia/commons/3/35/IMDb_logo.svg">
+        </div>
+
+        <div class="poster-overlay hover scores">
+          <div class="overlay-footer">
+            <div class="rating-box">
+              <div class="imdb">7.7</div>
+            </div><div class="rating-box">
+              <div class="positive metacritic">83</div>
+            </div>
+          </div>
+        </div>
+
+      </a>
+    </div><div class="text-container">
+      <p>
+        <a href="http://www.imdb.com/title/tt0096438" class="title" target="_blank">Who Framed Roger Rabbit</a>
+        <span class="year">(1988)</span>
+      </p>
+      <p class="genres">
+      
+        <a href="http://www.imdb.com/genre/Animation" class="genre" target="_blank">Animation</a>
+      
+        <a href="http://www.imdb.com/genre/Comedy" class="genre" target="_blank">Comedy</a>
+      
+        <a href="http://www.imdb.com/genre/Crime" class="genre" target="_blank">Crime</a>
+      
+      </p>
+      
+        <p class="plot">A toon hating detective is a cartoon rabbit&#x27;s only hope to prove his innocence when he is accused of murder. <a href="http://www.imdb.com/title/tt0096438/plotsummary" class="more-plot" target="_blank">More...</a></p>
+      
+    </div>
+  </div>
+  
+  <div class="movie">
+    <div class="poster">
+      
+        <img class="poster-image" src="http://ia.media-imdb.com/images/M/MV5BMjIxMjgxNTk0MF5BMl5BanBnXkFtZTgwNjIyOTg2MDE@._V1_SX300.jpg">
+      
+      <a href="http://www.imdb.com/title/tt0993846" target="_blank">
+
+        <div class="poster-overlay hover obscure"></div>
+
+        <div class="poster-overlay hover logo-overlay">
+          <img class="logo" src="http://upload.wikimedia.org/wikipedia/commons/3/35/IMDb_logo.svg">
+        </div>
+
+        <div class="poster-overlay hover scores">
+          <div class="overlay-footer">
+            <div class="rating-box">
+              <div class="imdb">8.5</div>
+            </div><div class="rating-box">
+              <div class="positive metacritic">75</div>
+            </div>
+          </div>
+        </div>
+
+      </a>
+    </div><div class="text-container">
+      <p>
+        <a href="http://www.imdb.com/title/tt0993846" class="title" target="_blank">The Wolf of Wall Street</a>
+        <span class="year">(2013)</span>
+      </p>
+      <p class="genres">
+      
+        <a href="http://www.imdb.com/genre/Biography" class="genre" target="_blank">Biography</a>
+      
+        <a href="http://www.imdb.com/genre/Comedy" class="genre" target="_blank">Comedy</a>
+      
+        <a href="http://www.imdb.com/genre/Crime" class="genre" target="_blank">Crime</a>
+      
+      </p>
+      
+        <p class="plot">Based on the true story of Jordan Belfort, from his rise to a wealthy stockbroker living the high life to his fall involving crime, corruption and the federal government. <a href="http://www.imdb.com/title/tt0993846/plotsummary" class="more-plot" target="_blank">More...</a></p>
+      
+    </div>
+  </div>
+  
+  <div class="movie">
+    <div class="poster">
+      
+        <img class="poster-image" src="http://ia.media-imdb.com/images/M/MV5BMTg0NTgxMjIxOF5BMl5BanBnXkFtZTcwMDM0MDY1OQ@@._V1_SX300.jpg">
+      
+      <a href="http://www.imdb.com/title/tt0816711" target="_blank">
+
+        <div class="poster-overlay hover obscure"></div>
+
+        <div class="poster-overlay hover logo-overlay">
+          <img class="logo" src="http://upload.wikimedia.org/wikipedia/commons/3/35/IMDb_logo.svg">
+        </div>
+
+        <div class="poster-overlay hover scores">
+          <div class="overlay-footer">
+            <div class="rating-box">
+              <div class="imdb">7.1</div>
+            </div><div class="rating-box">
+              <div class="positive metacritic">63</div>
+            </div>
+          </div>
+        </div>
+
+      </a>
+    </div><div class="text-container">
+      <p>
+        <a href="http://www.imdb.com/title/tt0816711" class="title" target="_blank">World War Z</a>
+        <span class="year">(2013)</span>
+      </p>
+      <p class="genres">
+      
+        <a href="http://www.imdb.com/genre/Action" class="genre" target="_blank">Action</a>
+      
+        <a href="http://www.imdb.com/genre/Adventure" class="genre" target="_blank">Adventure</a>
+      
+        <a href="http://www.imdb.com/genre/Horror" class="genre" target="_blank">Horror</a>
+      
+      </p>
+      
+        <p class="plot">United Nations employee Gerry Lane traverses the world in a race against time to stop the Zombie pandemic that is toppling armies and governments, and threatening to destroy humanity itself. <a href="http://www.imdb.com/title/tt0816711/plotsummary" class="more-plot" target="_blank">More...</a></p>
+      
+    </div>
+  </div>
+  
+  <div class="movie">
+    <div class="poster">
+      
+        <img class="poster-image" src="http://ia.media-imdb.com/images/M/MV5BMTc5MjYyOTg4MF5BMl5BanBnXkFtZTcwNDc2MzQwMg@@._V1_SX300.jpg">
+      
+      <a href="http://www.imdb.com/title/tt1125849" target="_blank">
+
+        <div class="poster-overlay hover obscure"></div>
+
+        <div class="poster-overlay hover logo-overlay">
+          <img class="logo" src="http://upload.wikimedia.org/wikipedia/commons/3/35/IMDb_logo.svg">
+        </div>
+
+        <div class="poster-overlay hover scores">
+          <div class="overlay-footer">
+            <div class="rating-box">
+              <div class="imdb">8.0</div>
+            </div><div class="rating-box">
+              <div class="positive metacritic">81</div>
+            </div>
+          </div>
+        </div>
+
+      </a>
+    </div><div class="text-container">
+      <p>
+        <a href="http://www.imdb.com/title/tt1125849" class="title" target="_blank">The Wrestler</a>
+        <span class="year">(2008)</span>
+      </p>
+      <p class="genres">
+      
+        <a href="http://www.imdb.com/genre/Drama" class="genre" target="_blank">Drama</a>
+      
+        <a href="http://www.imdb.com/genre/Sport" class="genre" target="_blank">Sport</a>
+      
+      </p>
+      
+        <p class="plot">A faded professional wrestler must retire, but finds his quest for a new life outside the ring a dispiriting struggle. <a href="http://www.imdb.com/title/tt1125849/plotsummary" class="more-plot" target="_blank">More...</a></p>
+      
+    </div>
+  </div>
+  
+  <div class="movie">
+    <div class="poster">
+      
+        <img class="poster-image" src="http://ia.media-imdb.com/images/M/MV5BMTQ4OTUyNzcwN15BMl5BanBnXkFtZTcwMTQ1NDE3OA@@._V1_SX300.jpg">
+      
+      <a href="http://www.imdb.com/title/tt1790885" target="_blank">
+
+        <div class="poster-overlay hover obscure"></div>
+
+        <div class="poster-overlay hover logo-overlay">
+          <img class="logo" src="http://upload.wikimedia.org/wikipedia/commons/3/35/IMDb_logo.svg">
+        </div>
+
+        <div class="poster-overlay hover scores">
+          <div class="overlay-footer">
+            <div class="rating-box">
+              <div class="imdb">7.4</div>
+            </div><div class="rating-box">
+              <div class="positive metacritic">95</div>
+            </div>
+          </div>
+        </div>
+
+      </a>
+    </div><div class="text-container">
+      <p>
+        <a href="http://www.imdb.com/title/tt1790885" class="title" target="_blank">Zero Dark Thirty</a>
+        <span class="year">(2012)</span>
+      </p>
+      <p class="genres">
+      
+        <a href="http://www.imdb.com/genre/Drama" class="genre" target="_blank">Drama</a>
+      
+        <a href="http://www.imdb.com/genre/History" class="genre" target="_blank">History</a>
+      
+        <a href="http://www.imdb.com/genre/Thriller" class="genre" target="_blank">Thriller</a>
+      
+      </p>
+      
+        <p class="plot">A chronicle of the decade-long hunt for al-Qaeda terrorist leader Osama bin Laden after the September 2001 attacks, and his death at the hands of the Navy S.E.A.L. Team 6 in May 2011. <a href="http://www.imdb.com/title/tt1790885/plotsummary" class="more-plot" target="_blank">More...</a></p>
+      
+    </div>
+  </div>
+  
+</body>
+
+</html>
