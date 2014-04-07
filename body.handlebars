@@ -1,47 +1,47 @@
 <body>
   {{#each infos}}
-    <div class="movie">
-      <div class="poster">
-        {{#if this.Poster}}
-          <img class="poster-image" src="{{this.Poster}}">
-        {{else}}
-          <div class="empty-placeholder"></div>
-        {{/if}}
-        <a href="http://www.imdb.com/title/{{this.imdbID}}" target="_blank">
+  <div class="movie">
+    <div class="poster">
+      {{#if this.Poster}}
+        <img class="poster-image" src="{{this.Poster}}">
+      {{else}}
+        <div class="empty-placeholder"></div>
+      {{/if}}
+      <a href="http://www.imdb.com/title/{{this.imdbID}}" target="_blank">
 
-          <div class="poster-overlay hover obscure"></div>
+        <div class="poster-overlay hover obscure"></div>
 
-          <div class="poster-overlay hover logo-overlay">
-            <img class="logo" src="http://upload.wikimedia.org/wikipedia/commons/3/35/IMDb_logo.svg">
-          </div>
+        <div class="poster-overlay hover logo-overlay">
+          <img class="logo" src="http://upload.wikimedia.org/wikipedia/commons/3/35/IMDb_logo.svg">
+        </div>
 
-          <div class="poster-overlay hover scores">
-            <div class="overlay-footer">
-              <div class="rating-box">
-                <div class="imdb">{{this.imdbRating}}</div>
-              </div>{{!--
-          --}}<div class="rating-box">
-                <div class="{{this.MetascoreCategory}} metacritic">{{this.Metascore}}</div>
-              </div>
+        <div class="poster-overlay hover scores">
+          <div class="overlay-footer">
+            <div class="rating-box">
+              <div class="imdb">{{this.imdbRating}}</div>
+            </div>{{!--
+        --}}<div class="rating-box">
+              <div class="{{this.MetascoreCategory}} metacritic">{{this.Metascore}}</div>
             </div>
           </div>
+        </div>
 
-        </a>
-      </div>{{!--
-  --}}<div class="text-container">
-        <p>
-          <a href="http://www.imdb.com/title/{{this.imdbID}}" class="title" target="_blank">{{this.Title}}</a>
-          <span class="year">({{this.Year}})</span>
-        </p>
-        <p class="genres">
-        {{#each this.AllGenres}}
-          <a href="http://www.imdb.com/genre/{{this}}" class="genre" target="_blank">{{this}}</a>
-        {{/each}}
-        </p>
-        {{#if this.Plot}}
-          <p class="plot">{{this.Plot}} <a href="http://www.imdb.com/title/{{this.imdbID}}/plotsummary" class="more-plot" target="_blank">More...</a></p>
-        {{/if}}
-      </div>
+      </a>
+    </div>{{!--
+--}}<div class="text-container">
+      <p>
+        <a href="http://www.imdb.com/title/{{this.imdbID}}" class="title" target="_blank">{{this.Title}}</a>
+        <span class="year">({{this.Year}})</span>
+      </p>
+      <p class="genres">
+      {{#each this.AllGenres}}
+        <a href="http://www.imdb.com/genre/{{this}}" class="genre" target="_blank">{{this}}</a>
+      {{/each}}
+      </p>
+      {{#if this.Plot}}
+        <p class="plot">{{this.Plot}} <a href="http://www.imdb.com/title/{{this.imdbID}}/plotsummary" class="more-plot" target="_blank">More...</a></p>
+      {{/if}}
     </div>
+  </div>
   {{/each}}
 </body>
