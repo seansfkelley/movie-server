@@ -41,7 +41,7 @@ _postProcessInfo = (info) ->
 
   return # avoid implicti return -> early termination
 
-render = (infos) ->
+render = (infos, output) ->
   return Q.ninvoke fs, 'readFile', 'styles.less'
     .then (styles) ->
       winston.debug 'read styles file'
@@ -63,6 +63,6 @@ render = (infos) ->
       body = bodyTemplate { infos }
       html = htmlTemplate { body, styles }
 
-      return Q.ninvoke fs, 'writeFile', 'static.html', html
+      return Q.ninvoke fs, 'writeFile', output, html
 
 module.exports = { render }

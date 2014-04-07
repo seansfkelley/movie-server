@@ -18,6 +18,8 @@ else if argv.verbose
   winston.remove winston.transports.Console
   winston.add winston.transports.Console, { level : 'verbose' }
 
+output = argv.f ? 'static.html'
+
 Q.longStackSupport = true
 
 Q()
@@ -39,7 +41,7 @@ Q()
   return Q.all _.map(ids, imdb.informationForId)
 .then (infos) ->
   winston.info 'rendering static page'
-  return client.render infos
+  return client.render infos, output
 .then ->
   winston.info 'saving cache to disk'
   return imdb.saveCache()
