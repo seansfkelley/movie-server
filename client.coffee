@@ -23,7 +23,7 @@ _alphabeticSort = (i1, i2) ->
     when one > two then 1
     else 0
 
-_injectAdditionalInfo = (info) ->
+_postProcessInfo = (info) ->
   parsedMetascore = parseInt info.Metascore, 10
   info.MetascoreCategory = switch
     when parsedMetascore < 41  then 'negative'
@@ -32,6 +32,11 @@ _injectAdditionalInfo = (info) ->
     else 'unknown'
 
   info.AllGenres = _.map info.Genre.split(','), (g) -> g.trim()
+
+  if info.Poster == 'N/A'
+    info.Poster = null
+
+  return # avoid implicti return -> early termination
 
 render = (infos) ->
   return Q.ninvoke fs, 'readFile', 'styles.less'
@@ -49,8 +54,8 @@ render = (infos) ->
       bodyTemplate = handlebars.compile body.toString('utf-8')
       htmlTemplate = handlebars.compile html.toString('utf-8')
 
-      _.each infos, _injectAdditionalInfo
       infos = infos.slice().sort _alphabeticSort
+      _.each infos, _postProcessInfo
 
       body = bodyTemplate { infos }
       html = htmlTemplate { body, styles }

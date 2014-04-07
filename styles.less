@@ -46,6 +46,22 @@ a {
       display : block; // Remove weird extra pixels.
     }
 
+    .empty-placeholder {
+      width  : @poster-width;
+      height : @poster-width;
+
+      box-sizing : border-box;
+      border     : 1px solid lightgrey;
+
+      text-align : center;
+
+      &:after {
+        content     : 'No Image Available';
+        color       : lightgrey;
+        line-height : @poster-width;
+      }
+    }
+
     .poster-overlay {
       position : absolute;
       top      : 0;
