@@ -36,6 +36,9 @@ _postProcessInfo = (info) ->
   if info.Poster == 'N/A'
     info.Poster = null
 
+  if info.Plot == 'N/A'
+    info.Plot = null
+
   return # avoid implicti return -> early termination
 
 render = (infos) ->
