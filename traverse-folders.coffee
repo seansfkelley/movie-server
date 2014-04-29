@@ -26,11 +26,11 @@ INTIAL_BRACKETED_REGEX = /^(\s*[\[\(\{][^\]\)\}]*[\]\)\}])*\s*/
 _sanitizeFilename = (basename) ->
   basename = basename.replace INTIAL_BRACKETED_REGEX, ''
   i = _firstIndexOfAny basename, [
-    /\[/
-    /\(/
-    /\{/
+    /[\[\(\{]/
     /dvd(scr|rip)?|xvid|divx/i
     /\d{4}/
+    /s\d{2}e\d{2}/i
+    /(720|1080)p/i
   ]
   if i == -1
     i = basename.length
