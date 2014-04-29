@@ -1,5 +1,6 @@
 Q       = require 'q'
 _       = require 'lodash'
+_.str   = require 'underscore.string'
 winston = require 'winston'
 
 fs   = require 'fs'
@@ -34,7 +35,7 @@ _getJson = (url) ->
 
 idForTitle = (title) ->
   if _cache.titleToId[title]
-    winston.verbose "hit cache for title '#{title}' -> id '#{_cache.titleToId[title]}'"
+    winston.verbose "hit cache for title #{_.str.rpad '\'' + title + '\'', 30} -> id '#{_cache.titleToId[title]}'"
     return Q _cache.titleToId[title]
   else if _cache.unknownTitles[title]
     winston.verbose "skipping known-unknown title '#{title}'"

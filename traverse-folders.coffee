@@ -20,22 +20,41 @@ _firstIndexOfAny = (string, regexes) ->
     .min()
     .value()
 
+# These generally appear after the title.
+TRUNCATE_TOKENS = [
+  /[\[\(\{]/
+  /dvd(scr|rip)?|xvid|divx/i
+  /\d{4}/
+  /s\d{2}e\d{2}/i
+  /(720|1080)p/i
+  /hdtv/i
+]
+_truncateAfterPointlessTokens = (s) ->
+  i = _firstIndexOfAny s, TRUNCATE_TOKENS
+  if i == -1
+    i = s.length
+  return s.slice 0, i
+
+# These sometimes appear in the middle of titles (between show and episode names).
+DROP_TOKENS = [
+  /season(.\d{1,})/i
+  /episode(.\d{1,})/i
+]
+_dropOtherPointlessTokens = (s) ->
+  for t in DROP_TOKENS
+    s = s.replace t, ''
+  return s
+
 # This is fucking unreadable.
 # Find all string-initial, whitespace-separated pairings of any of [({ with any of })].
 INTIAL_BRACKETED_REGEX = /^(\s*[\[\(\{][^\]\)\}]*[\]\)\}])*\s*/
 _sanitizeFilename = (basename) ->
-  basename = basename.replace INTIAL_BRACKETED_REGEX, ''
-  i = _firstIndexOfAny basename, [
-    /[\[\(\{]/
-    /dvd(scr|rip)?|xvid|divx/i
-    /\d{4}/
-    /s\d{2}e\d{2}/i
-    /(720|1080)p/i
-  ]
-  if i == -1
-    i = basename.length
-  normalized = basename
-    .slice 0, i
+  normalized =
+    _dropOtherPointlessTokens(
+      _truncateAfterPointlessTokens(
+        basename.replace INTIAL_BRACKETED_REGEX, ''
+      )
+    )
     .replace /[-.]/g, ' '
     .replace /\s{2,}/g, ' '
     .trim()

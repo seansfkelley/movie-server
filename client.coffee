@@ -39,7 +39,7 @@ _postProcessInfo = (info) ->
   if info.Plot == 'N/A'
     info.Plot = null
 
-  return # avoid implicti return -> early termination
+  return # avoid implicit return -> early termination
 
 render = (infos, output) ->
   return Q.ninvoke fs, 'readFile', 'styles.less'

@@ -8,16 +8,15 @@
   },
 
   "dependencies" : {
-    "coffee-script" : "*",
-    "coffee-errors" : "*",
-    "optimist"      : "*",
-    "winston"       : "*",
-    "lodash"        : "*",
+    "coffee-script"     : "*",
+    "coffee-errors"     : "*",
+    "optimist"          : "*",
+    "winston"           : "*",
+    "lodash"            : "*",
     "underscore.string" : "*",
-    "unorm"         : "*",
-    "q"             : "*",
-
-    "handlebars"    : "*",
-    "less"          : "*"
+    "unorm"             : "*",
+    "q"                 : "*",
+    "handlebars"        : "*",
+    "less"              : "*"
   }
 }
