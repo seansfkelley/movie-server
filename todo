@@ -10,5 +10,4 @@ for browser-facing stuff:
 - search-as-you-type
 - last-rendered date
 - totally statically served (if possible with js resources)
-- include original filenames (alt-text?)
 - include somewhere filenames that failed to parse

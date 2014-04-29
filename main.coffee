@@ -3,6 +3,7 @@ require 'coffee-script/register'
 
 Q       = require 'q'
 _       = require 'lodash'
+_.str   = require 'underscore.string'
 winston = require 'winston'
 
 argv = require 'optimist'
@@ -51,16 +52,22 @@ Q()
 .then ->
   movies = traverser.findMoviesIn argv._...
   winston.info "found #{movies.length} possible movies"
-  winston.verbose "movies are:\n#{JSON.stringify movies, null, 2}"
+  formattedMovies = _.map(movies, (m) -> "  #{_.str.rpad m.sanitized, 30} (from #{m.basename})").join '\n'
+  winston.verbose "movies are:\n#{formattedMovies}"
   return movies
 .then (movies) ->
   winston.info "querying ids for #{movies.length} titles"
-  return Q.all _.map(movies, imdb.idForTitle)
-.then (ids) ->
-  return _.compact ids
-.then (ids) ->
-  winston.info "querying information for #{ids.length} ids"
-  return Q.all _.map(ids, imdb.informationForId)
+  return Q.all _.map(_.pluck(movies, 'sanitized'), imdb.idForTitle)
+  .then (ids) ->
+    infos = _.chain movies
+      .zip ids
+      .map ([ movie, id ]) -> _.extend { id }, movie
+      .filter ({ id }) -> !!id
+      .value()
+    winston.info "querying information for #{infos.length} ids"
+    return Q.all _.map(infos, ({ id }) -> imdb.informationForId(id))
+    .then (imdbInfos) ->
+      return _.map imdbInfos, (imdbInfo, i) -> _.extend { Filename : infos[i].basename }, imdbInfo
 .then (infos) ->
   winston.info 'rendering static page'
   return client.render infos, argv.file

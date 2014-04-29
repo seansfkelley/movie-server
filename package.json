@@ -13,6 +13,7 @@
     "optimist"      : "*",
     "winston"       : "*",
     "lodash"        : "*",
+    "underscore.string" : "*",
     "unorm"         : "*",
     "q"             : "*",
 

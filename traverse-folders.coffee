@@ -55,9 +55,16 @@ _checkFileOrDirectory = (parent) -> (p) ->
 
   stats = fs.statSync(fullPath)
   if stats.isFile() and path.extname(p) in MOVIE_FILETYPES
-    return _sanitizeFilename path.basename(p, path.extname(p))
+    basename = path.basename(p, path.extname(p))
+    return {
+      sanitized : _sanitizeFilename basename
+      basename  : basename
+    }
   else if stats.isDirectory() and _directoryContainsMovies fullPath
-    return _sanitizeFilename p
+    return {
+      sanitized : _sanitizeFilename p
+      basename  : p
+    }
   else
     return null
 
@@ -74,8 +81,8 @@ findMoviesIn = (directories...) ->
   return _.chain directories
     .map _findSingle
     .flatten()
-    .sort()
-    .uniq()
+    .sortBy('sanitized')
+    .uniq('sanitized')
     .value()
 
 module.exports = { findMoviesIn }
