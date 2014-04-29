@@ -9,15 +9,25 @@ argv = require 'optimist'
   .usage 'Usage: $0 directories...'
   .boolean [ 'debug', 'verbose', 'h' ]
   .options 'f', {
-    alias   : 'file'
-    default : 'movies.html'
+    alias    : 'file'
+    default  : 'movies.html'
+    describe : 'output HTML filename'
   }
   .options 'h', {
-    alias   : 'help'
+    alias    : 'help'
+    describe : 'show this message'
+  }
+  .options 'v', {
+    alias    : 'verbose'
+    describe : 'enable verbose logging'
+  }
+  .options 'd', {
+    alias    : 'debug'
+    describe : 'enable debug logging'
   }
   .argv
 
-if argv.help
+if argv.help or argv._.length == 0
   require('optimist').showHelp()
   return
 

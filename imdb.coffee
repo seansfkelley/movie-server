@@ -53,7 +53,7 @@ idForTitle = (title) ->
           .value()
       .then (info) ->
         if not info?.id
-          winston.verbose "flagging known-unknown title '#{title}"
+          winston.verbose "flagging known-unknown title '#{title}'"
           _cache.unknownTitles[title] = true
           return
         else

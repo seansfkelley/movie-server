@@ -4,7 +4,7 @@
   "author"  : "Sean Kelley <seansfkelley@gmail.com>",
 
   "scripts" : {
-    "start" : "coffee main.coffee"
+    "start" : "coffee main.coffee --help"
   },
 
   "dependencies" : {
