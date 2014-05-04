@@ -1,7 +1,8 @@
 {
-  "name"    : "movie-server",
-  "version" : "0.0.1",
-  "author"  : "Sean Kelley <seansfkelley@gmail.com>",
+  "name"       : "movie-server",
+  "version"    : "0.0.1",
+  "author"     : "Sean Kelley <seansfkelley@gmail.com>",
+  "repository" : "https://github.com/seansfkelley/movie-server",
 
   "scripts" : {
     "start" : "coffee main.coffee --help"
