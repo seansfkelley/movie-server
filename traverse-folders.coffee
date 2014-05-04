@@ -37,8 +37,8 @@ _truncateAfterPointlessTokens = (s) ->
 
 # These sometimes appear in the middle of titles (between show and episode names).
 DROP_TOKENS = [
-  /season(.\d{1,})/i
-  /episode(.\d{1,})/i
+  /season.\d{1,}(.complete)?/i
+  /episode.\d{1,}/i
 ]
 _dropOtherPointlessTokens = (s) ->
   for t in DROP_TOKENS
