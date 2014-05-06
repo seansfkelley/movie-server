@@ -8,7 +8,7 @@ winston = require 'winston'
 
 argv = require 'optimist'
   .usage 'Usage: $0 directories...'
-  .boolean [ 'debug', 'verbose', 'h' ]
+  .boolean [ 'debug', 'verbose', 'help' ]
   .options 'f', {
     alias    : 'file'
     default  : 'movies.html'
