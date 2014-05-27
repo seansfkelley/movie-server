@@ -28,6 +28,8 @@ TRUNCATE_TOKENS = [
   /s\d{2}e\d{2}/i
   /(720|1080)p/i
   /hdtv/i
+  /director's cut/i
+  /blu-?ray/i
 ]
 _truncateAfterPointlessTokens = (s) ->
   i = _firstIndexOfAny s, TRUNCATE_TOKENS
@@ -39,6 +41,7 @@ _truncateAfterPointlessTokens = (s) ->
 DROP_TOKENS = [
   /season.\d{1,}(.complete)?/i
   /episode.\d{1,}/i
+  /\D\d{1,3}-\d{1,3}\D(complete)?/i # {1,3} because 4-digit numbers might be years in the title.
 ]
 _dropOtherPointlessTokens = (s) ->
   for t in DROP_TOKENS
