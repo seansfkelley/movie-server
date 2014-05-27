@@ -104,7 +104,7 @@ findMoviesIn = (directories...) ->
     .map _findSingle
     .flatten()
     .sortBy('sanitized')
-    .uniq('sanitized')
+    .uniq('sanitized', true)
     .value()
 
 module.exports = { findMoviesIn }
