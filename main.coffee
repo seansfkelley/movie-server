@@ -50,16 +50,16 @@ Q()
   winston.info 'attempting to load from cache file'
   return imdb.loadCache()
 .then ->
-  movies = traverser.findMoviesIn argv._...
-  winston.info "found #{movies.length} possible movies"
-  formattedMovies = _.map(movies, (m) -> "  #{_.str.rpad m.sanitized, 30} (from #{m.basename})").join '\n'
-  winston.verbose "movies are:\n#{formattedMovies}"
-  return movies
-.then (movies) ->
-  winston.info "querying ids for #{movies.length} titles"
-  return Q.all _.map(_.pluck(movies, 'sanitized'), imdb.idForTitle)
+  titles = traverser.findMoviesIn argv._...
+  winston.info "found #{titles.length} possible movies"
+  formattedMovies = _.map(titles, (m) -> "  #{_.str.rpad m.sanitized, 30} (from #{m.basename})").join '\n'
+  winston.verbose "titles are:\n#{formattedMovies}"
+  return titles
+.then (titles) ->
+  winston.info "querying ids for #{titles.length} titles"
+  return Q.all _.map(_.pluck(titles, 'sanitized'), imdb.idForTitle)
   .then (ids) ->
-    infos = _.chain movies
+    infos = _.chain titles
       .zip ids
       .map ([ movie, id ]) -> _.extend { id }, movie
       .filter ({ id }) -> !!id
