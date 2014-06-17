@@ -25,7 +25,7 @@ TRUNCATE_TOKENS = [
   /[\[\(\{]/
   /dvd(scr|rip)?|xvid|divx/i
   /\d{4}/
-  /s\d{2}e\d{2}/i
+  /(s|e)\d{2}/i
   /(720|1080)p/i
   /hdtv/i
   /director's cut/i
