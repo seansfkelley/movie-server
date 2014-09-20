@@ -67,7 +67,15 @@ Q()
     winston.info "querying information for #{infos.length} ids"
     return Q.all _.map(infos, ({ id }) -> imdb.informationForId(id))
     .then (imdbInfos) ->
-      return _.map imdbInfos, (imdbInfo, i) -> _.extend { Filename : infos[i].basename }, imdbInfo
+      return _.chain imdbInfos
+        .map (imdbInfo, i) -> _.extend { Filename : infos[i].basename }, imdbInfo
+        .filter (imdbInfo) ->
+          if imdbInfo.Error
+            winston.warn 'error while retrieving movie', imdbInfo
+            return false
+          return true
+        .value()
+
 .then (infos) ->
   winston.info 'rendering static page'
   return client.render infos, argv.file
