@@ -1,3 +1,5 @@
+#!/usr/bin/env coffee
+
 require 'coffee-errors'
 require 'coffee-script/register'
 
