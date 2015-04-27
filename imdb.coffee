@@ -25,12 +25,24 @@ saveCache = ->
   return Q.ninvoke fs, 'writeFile', 'cache.json', JSON.stringify(_cache)
 
 _getJson = (url) ->
+  winston.debug 'get JSON', url
   d = Q.defer()
+
   http.get url, (res) ->
     body = ''
-    res.on 'data', (data) -> body += data.toString('utf-8')
-    res.on 'end', -> d.resolve JSON.parse(body)
-    res.on 'error', (err) -> d.reject err
+    res.on 'data', (data) ->
+      body += data.toString('utf-8')
+
+    res.on 'end', ->
+      try
+        d.resolve JSON.parse(body)
+      catch e
+        winston.error "url #{url} errored, response was:\n#{body}"
+        d.reject e
+
+    res.on 'error', (err) ->
+      d.reject err
+
   return d.promise
 
 idForTitle = (title) ->

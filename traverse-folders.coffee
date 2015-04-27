@@ -105,6 +105,7 @@ findMoviesIn = (directories...) ->
   return _.chain directories
     .map _findSingle
     .flatten()
+    .filter('sanitized')
     .sortBy('sanitized')
     .uniq('sanitized', true)
     .value()
