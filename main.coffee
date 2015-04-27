@@ -52,6 +52,7 @@ Q()
   winston.info 'attempting to load from cache file'
   return imdb.loadCache()
 .then ->
+  winston.info 'crawling directories...'
   titles = traverser.findMoviesIn argv._...
   winston.info "found #{titles.length} possible movies"
   formattedMovies = _.map(titles, (m) -> "  #{_.str.rpad m.sanitized, 30} (from #{m.basename})").join '\n'
