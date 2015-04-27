@@ -31,6 +31,8 @@ TRUNCATE_TOKENS = [
   /director's cut/i
   /blu-?ray/i
   /screener/i
+  /EXTENDED/
+  /LIMITED/
 ]
 _truncateAfterPointlessTokens = (s) ->
   i = _firstIndexOfAny s, TRUNCATE_TOKENS
