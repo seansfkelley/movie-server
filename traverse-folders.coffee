@@ -30,6 +30,7 @@ TRUNCATE_TOKENS = [
   /hdtv/i
   /director's cut/i
   /blu-?ray/i
+  /screener/i
 ]
 _truncateAfterPointlessTokens = (s) ->
   i = _firstIndexOfAny s, TRUNCATE_TOKENS
@@ -60,6 +61,7 @@ _sanitizeFilename = (basename) ->
     )
     .replace /[-.]/g, ' '
     .replace /\s{2,}/g, ' '
+    .replace '_', ' '
     .trim()
     .normalize 'NFKC' # from unorm
   return latinize normalized
