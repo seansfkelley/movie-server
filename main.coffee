@@ -66,6 +66,7 @@ Q()
       .zip ids
       .map ([ movie, id ]) -> _.extend { id }, movie
       .filter ({ id }) -> !!id
+      .uniq 'id'
       .value()
     winston.info "querying information for #{infos.length} ids"
     return Q.all _.map(infos, ({ id }) -> imdb.informationForId(id))
